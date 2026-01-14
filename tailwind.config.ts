@@ -95,11 +95,11 @@ export default {
         },
         'slide-out-D': {
             '0%, 40%': { transform: 'translateX(0)' },
-            '100%': { transform: 'translateX(0.8ch)' },
+            '100%': { transform: 'translateX(0.9ch)' },
         },
         'slide-out-dot': {
             '0%, 40%': { transform: 'translateX(0)' },
-            '100%': { transform: 'translateX(-0.8ch)' },
+            '100%': { transform: 'translateX(-0.9ch)' },
         },
       },
       animation: {
