@@ -90,7 +90,7 @@ export default {
           '100%': { opacity: '1' },
         },
         'dot-color-change': {
-          '0%, 50%': { color: 'hsl(var(--primary))' },
+          '0%, 50%': { color: 'hsl(var(--foreground))' },
           '100%': { color: 'hsl(var(--accent))' },
         }
       },
