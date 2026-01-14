@@ -18,10 +18,11 @@ export default function PrescriptionSearch({ searchTags }: PrescriptionSearchPro
       return searchTags.every(tag => {
         const term = tag.toLowerCase();
         const inCondition = item.condition.toLowerCase().includes(term);
+        const inCategory = item.category.toLowerCase().includes(term);
         const inTags = item.tags.some(t => t.toLowerCase().includes(term));
         const inDrugs = item.prescriptions.some(p => p.drug.toLowerCase().includes(term));
         
-        return inCondition || inTags || inDrugs;
+        return inCondition || inCategory || inTags || inDrugs;
       });
     });
   }, [searchTags]);
