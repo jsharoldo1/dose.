@@ -14,14 +14,17 @@ export default function PrescriptionSearch({ searchQuery }: PrescriptionSearchPr
     const trimmedQuery = searchQuery.trim();
     if (!trimmedQuery) return prescriptionsData;
 
-    const lowercasedQuery = trimmedQuery.toLowerCase();
+    const searchTerms = trimmedQuery.toLowerCase().split(' ').filter(term => term);
 
     return prescriptionsData.filter(item => {
-      const inCondition = item.condition.toLowerCase().includes(lowercasedQuery);
-      const inTags = item.tags.some(tag => tag.toLowerCase().includes(lowercasedQuery));
-      const inDrugs = item.prescriptions.some(p => p.drug.toLowerCase().includes(lowercasedQuery));
-      
-      return inCondition || inTags || inDrugs;
+      // Check if all search terms are present in the prescription data
+      return searchTerms.every(term => {
+        const inCondition = item.condition.toLowerCase().includes(term);
+        const inTags = item.tags.some(tag => tag.toLowerCase().includes(term));
+        const inDrugs = item.prescriptions.some(p => p.drug.toLowerCase().includes(term));
+        
+        return inCondition || inTags || inDrugs;
+      });
     });
   }, [searchQuery]);
 
