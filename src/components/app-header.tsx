@@ -2,11 +2,9 @@
 
 import { useState } from 'react';
 import type { Dispatch, SetStateAction, KeyboardEvent } from 'react';
-import { Search, X } from 'lucide-react';
+import { Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { ThemeToggle } from '@/components/theme-toggle';
-import { Badge } from '@/components/ui/badge';
-import { cn } from '@/lib/utils';
 
 type AppHeaderProps = {
   searchTags: string[];
@@ -24,13 +22,7 @@ export default function AppHeader({ searchTags, setSearchTags }: AppHeaderProps)
         setSearchTags([...searchTags, newTag]);
       }
       setInputValue('');
-    } else if (e.key === 'Backspace' && !inputValue && searchTags.length > 0) {
-      setSearchTags(searchTags.slice(0, -1));
     }
-  };
-
-  const removeTag = (tagToRemove: string) => {
-    setSearchTags(searchTags.filter(tag => tag !== tagToRemove));
   };
 
   return (
@@ -44,30 +36,12 @@ export default function AppHeader({ searchTags, setSearchTags }: AppHeaderProps)
 
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-             <div className={cn(
-                "flex h-10 w-full items-center rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-within:ring-2 focus-within:ring-ring focus-within:ring-offset-2",
-                "md:w-64 lg:w-96"
-              )}>
-              <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
-              <div className="flex flex-wrap gap-1.5 ml-2">
-                {searchTags.map(tag => (
-                  <Badge key={tag} variant="secondary" className="gap-1.5 pl-2 pr-1">
-                    {tag}
-                    <button
-                      type="button"
-                      onClick={() => removeTag(tag)}
-                      className="rounded-full bg-background/50 p-0.5 text-muted-foreground hover:bg-background hover:text-foreground"
-                    >
-                      <X className="h-3 w-3" />
-                      <span className="sr-only">Remove {tag}</span>
-                    </button>
-                  </Badge>
-                ))}
-              </div>
+             <div className="relative md:w-64 lg:w-96">
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder={searchTags.length === 0 ? "Buscar por condição ou remédio..." : ""}
-                className="h-auto flex-1 border-0 bg-transparent p-0 pl-2 shadow-none focus-visible:ring-0"
+                placeholder="Buscar por condição, remédio..."
+                className="w-full pl-9"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={handleKeyDown}
