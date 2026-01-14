@@ -19,52 +19,79 @@ export const prescriptionsData: PrescriptionData[] = [
   {
     "id": "taquicardia-supraventricular",
     "category": "Cardiologia",
-    "condition": "Taquicardia Supraventricular (Estável)",
-    "tags": ["arritmia", "adenosina", "metoprolol", "coração acelerado"],
+    "condition": "Taquicardia Supraventricular (TSV)",
+    "tags": ["arritmia", "adenosina", "metoprolol", "coração acelerado", "tsv"],
     "prescriptions": [
-      { "drug": "Manobra Vagal", "dosage": "N/A", "route": "Físico", "frequency": "Tentativa inicial em pacientes estáveis e sem doença pulmonar grave." },
-      { "drug": "Adenosina (6mg/2ml)", "dosage": "6mg (1 ampola)", "route": "IV Bolus Rápido", "frequency": "Seguido de flush 20ml SF + elevar membro. Se falha, dobrar para 12mg." },
-      { "drug": "Metoprolol (5mg/5ml)", "dosage": "5mg", "route": "IV Lento", "frequency": "Repetir a cada 5 min até máx 15mg (3 ampolas) se necessário." }
+      { "drug": "Manobra Vagal", "dosage": "N/A", "route": "Físico", "frequency": "Tentativa inicial em pacientes estáveis." },
+      { "drug": "Adenosina", "dosage": "6mg", "route": "IV Bolus Rápido", "frequency": "Seguido de flush 20ml SF. Se falha, administrar 12mg." },
+      { "drug": "Metoprolol", "dosage": "2.5-5mg", "route": "IV Lento", "frequency": "Repetir a cada 5 min até dose máxima de 15mg." }
     ],
-    "clinicalNotes": "Se instabilidade (hipotensão, dor torácica, rebaixamento), proceder Cardioversão Elétrica Sincronizada."
+    "clinicalNotes": "Em caso de instabilidade hemodinâmica (hipotensão, choque, dor torácica, dispneia), proceder com cardioversão elétrica sincronizada."
+  },
+  {
+    "id": "taquicardia-ventricular",
+    "category": "Cardiologia",
+    "condition": "Taquicardia Ventricular (TV)",
+    "tags": ["arritmia", "tv", "amiodarona", "lidocaina"],
+    "prescriptions": [
+      { "drug": "Amiodarona (Ataque)", "dosage": "150mg", "route": "IV", "frequency": "Diluir em 100ml de SGI 5% e correr em 30 min." },
+      { "drug": "Amiodarona (Manutenção)", "dosage": "450mg", "route": "IV em BIC", "frequency": "Diluir em 230ml SGI 5%, correr 16ml/h por 6h, depois 8ml/h por 18h." },
+      { "drug": "Lidocaína 2% (opcional)", "dosage": "1.5 mg/kg", "route": "IV Lento", "frequency": "Se falha, repetir 0.5 mg/kg. Máx: 3-4 mg/kg." }
+    ],
+    "clinicalNotes": "Em pacientes instáveis, a cardioversão elétrica é o tratamento de escolha. Descontinuar amiodarona se ocorrer bloqueio AV."
   },
   {
     "id": "fibrilacao-atrial",
     "category": "Cardiologia",
-    "condition": "Fibrilação Atrial / Flutter (Controle de Frequência)",
-    "tags": ["arritmia", "fa", "metoprolol", "deslanosideo", "cedilanide"],
+    "condition": "Fibrilação Atrial (FA) / Flutter",
+    "tags": ["arritmia", "fa", "flutter", "metoprolol", "verapamil", "deslanosideo"],
     "prescriptions": [
-      { "drug": "Metoprolol (5mg/5ml)", "dosage": "5mg (1 ampola)", "route": "IV", "frequency": "Em 2 min. Repetir a cada 5 min até máx 20mg." },
-      { "drug": "Deslanosídeo (0,4mg/2ml)", "dosage": "0,4 a 0,8mg (1-2 ampolas)", "route": "IV Lento", "frequency": "Dose única." },
-      { "drug": "Verapamil (5mg/2ml)", "dosage": "5-10mg (1-2 ampolas)", "route": "IV", "frequency": "Em 2-5 min. Repetir após 30 min se necessário." }
+      { "drug": "Metoprolol", "dosage": "5mg", "route": "IV", "frequency": "Em 2 min. Repetir a cada 5 min até máx 20mg para controle de frequência." },
+      { "drug": "Verapamil", "dosage": "5-10mg", "route": "IV", "frequency": "Em 2-5 min. Repetir após 30 min se necessário para controle de frequência." },
+      { "drug": "Deslanosídeo", "dosage": "0.4-0.8mg", "route": "IV Lento", "frequency": "Dose única para controle de frequência." },
+      { "drug": "Amiodarona (Cardioversão Química)", "dosage": "5-7 mg/kg", "route": "IV", "frequency": "Em 30-60 min, para reversão do ritmo." }
     ],
-    "clinicalNotes": "Atenção: Não cardioverter FA > 48h sem anticoagulação prévia (risco de trombo). Priorize controle de frequência."
+    "clinicalNotes": "Atenção à anticoagulação. Não cardioverter FA com mais de 48h sem exclusão de trombo atrial. Priorizar controle de frequência em pacientes estáveis."
   },
   {
     "id": "iam-sca",
     "category": "Cardiologia",
-    "condition": "Síndrome Coronariana Aguda (IAM)",
-    "tags": ["infarto", "dor no peito", "aas", "clopidogrel", "tridil"],
+    "condition": "Síndrome Coronariana Aguda (SCA)",
+    "tags": ["infarto", "iam", "dor no peito", "aas", "clopidogrel", "ticagrelor"],
     "prescriptions": [
-      { "drug": "AAS", "dosage": "300mg (3 cp)", "route": "VO", "frequency": "Dose de ataque (mastigar)." },
-      { "drug": "Clopidogrel", "dosage": "300mg (4 cp) ou 600mg (8 cp)", "route": "VO", "frequency": "300mg se trombólise ou conservador; 600mg se Angioplastia primária." },
-      { "drug": "Enoxaparina", "dosage": "1mg/kg", "route": "SC", "frequency": "De 12/12h. (Reduzir dose se >75 anos ou disfunção renal)." },
-      { "drug": "Isordil", "dosage": "5mg", "route": "SL (Sublingual)", "frequency": "Se dor. Máximo 3 doses. Contraindicado se uso de viagra/tadalafila ou IAM de VD." },
-      { "drug": "Nitroglicerina (Tridil)", "dosage": "5mcg/min (inicial)", "route": "IV Contínuo", "frequency": "Diluir 1 amp em 240ml SF. Titular conforme dor e PA." }
+      { "drug": "AAS", "dosage": "300mg", "route": "VO", "frequency": "Dose de ataque (mastigar)." },
+      { "drug": "Ticagrelor", "dosage": "180mg", "route": "VO", "frequency": "Dose de ataque, seguido de 90mg 12/12h." },
+      { "drug": "Clopidogrel", "dosage": "300-600mg", "route": "VO", "frequency": "Dose de ataque. Varia conforme estratégia (ICP ou conservador)." },
+      { "drug": "Enoxaparina", "dosage": "1mg/kg", "route": "SC", "frequency": "De 12/12h. Ajustar dose para >75 anos ou disfunção renal." },
+      { "drug": "Isordil", "dosage": "5mg", "route": "SL", "frequency": "Se dor. Máx 3 doses. Contraindicado em IAM de VD ou uso de sildenafil/tadalafil." },
+      { "drug": "Nitroglicerina (Tridil)", "dosage": "5mcg/min (inicial)", "route": "IV Contínuo", "frequency": "Para dor persistente ou congestão. Titular conforme PA." },
+      { "drug": "Atorvastatina", "dosage": "40mg", "route": "VO", "frequency": "Dose diária." }
     ],
-    "clinicalNotes": "Monitorar SatO2 (O2 se <90%). Morfina apenas se dor refratária (evitar se possível)."
+    "clinicalNotes": "Monitorar SatO2 (O2 se <90%). Morfina apenas se dor refratária. Avaliar indicação de trombólise."
+  },
+  {
+    "id": "trombolise-iam",
+    "category": "Cardiologia",
+    "condition": "Trombólise no IAM com Supra",
+    "tags": ["trombolise", "infarto", "iam", "alteplase", "sca"],
+    "prescriptions": [
+      { "drug": "Alteplase", "dosage": "15mg bolus, depois 0.75mg/kg em 30min (máx 50mg), seguido de 0.5mg/kg em 60min (máx 35mg)", "route": "IV", "frequency": "Dose total máxima de 100mg." }
+    ],
+    "clinicalNotes": "Verificar contraindicações absolutas: AVC hemorrágico prévio, AVC isquêmico < 3 meses, lesão estrutural do SNC, cirurgia ou trauma grave recentes, sangramento ativo, suspeita de dissecção de aorta."
   },
   {
     "id": "ic-descompensada",
     "category": "Cardiologia",
-    "condition": "IC Descompensada / Edema Agudo de Pulmão",
-    "tags": ["falta de ar", "furosemida", "lasix", "congestão"],
+    "condition": "IC Descompensada / Edema Agudo de Pulmão (EAP)",
+    "tags": ["falta de ar", "furosemida", "lasix", "congestão", "eap", "ic"],
     "prescriptions": [
-      { "drug": "Furosemida (20mg/2ml)", "dosage": "1 a 1,5mg/kg", "route": "IV em Bolus", "frequency": "Dose ataque. Manter balanço hídrico negativo." },
-      { "drug": "Nitroprussiato (Nipride)", "dosage": "0,25 a 0,5mcg/kg/min", "route": "IV Contínuo", "frequency": "Diluir 1 amp (2ml) em 248ml SF. Fotossensível. Controlar PA rigorosamente." },
+      { "drug": "Furosemida", "dosage": "1 a 1.5mg/kg", "route": "IV em Bolus", "frequency": "Dose de ataque. Manter balanço hídrico negativo." },
+      { "drug": "Nitroprussiato (Nipride)", "dosage": "0.25-0.5mcg/kg/min", "route": "IV Contínuo", "frequency": "Para vasodilatação. Controlar PA rigorosamente. Fotossensível." },
+      { "drug": "Nitroglicerina (Tridil)", "dosage": "5mcg/min (inicial)", "route": "IV Contínuo", "frequency": "Alternativa ao Nipride. Titular conforme PA." },
+      { "drug": "Dobutamina", "dosage": "2-20mcg/kg/min", "route": "IV Contínuo", "frequency": "Em caso de baixa perfusão (perfil frio e úmido)." },
       { "drug": "VNI (Ventilação Não Invasiva)", "dosage": "CPAP ou BiPAP", "route": "Dispositivo", "frequency": "Fundamental no manejo inicial do EAP hipertensivo." }
     ],
-    "clinicalNotes": "Objetivo: Vasodilatação e Diurese. Morfina caiu em desuso no EAP."
+    "clinicalNotes": "Objetivo é otimizar volemia e perfusão. Morfina caiu em desuso no EAP. Classificar perfil hemodinâmico (quente/frio, seco/úmido) para guiar terapia."
   },
   {
     "id": "cefaleia-enxaqueca",
