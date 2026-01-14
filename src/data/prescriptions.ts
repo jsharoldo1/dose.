@@ -372,5 +372,17 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Reposição de Potássio (KCl)", "dosage": "Ajustar conforme K+ sérico", "route": "IV", "frequency": "NÃO iniciar insulina se K+ < 3,3 mEq/L." }
     ],
     "clinicalNotes": "Monitorização intensiva de glicemia capilar (1/1h), eletrólitos e gasometria. Adicionar SG 5% à hidratação quando glicemia < 250 mg/dL."
+  },
+  {
+    "id": "lombalgia-mecanica",
+    "category": "Ortopedia",
+    "condition": "Lombalgia Mecânica / Torcicolo",
+    "tags": ["dor nas costas", "lombalgia", "relaxante muscular", "torsilax", "miosan"],
+    "prescriptions": [
+      { "drug": "Cetoprofeno (IV)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100mL SF 0,9%, correr em 20 min." },
+      { "drug": "Torsilax (ou similar)", "dosage": "1 cp", "route": "VO", "frequency": "12/12h ou 8/8h, por no máximo 7 dias." },
+      { "drug": "Ciclobenzaprina (Miosan)", "dosage": "10mg", "route": "VO", "frequency": "12/12h, por 5 dias." }
+    ],
+    "clinicalNotes": "Aplicar calor local. Orientar repouso relativo e evitar fatores de piora."
   }
-];
+]
