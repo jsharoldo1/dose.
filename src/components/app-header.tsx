@@ -30,7 +30,7 @@ export default function AppHeader({ searchTags, setSearchTags }: AppHeaderProps)
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 hidden md:flex">
           <a href="/" className="mr-6 flex items-center space-x-2">
-            <span className="hidden font-headline text-2xl font-extrabold sm:inline-block">Dose.</span>
+            <span className="hidden font-headline text-2xl font-extrabold sm:inline-block">Dose<span className="text-accent">.</span></span>
           </a>
         </div>
 
