@@ -169,9 +169,12 @@ export const prescriptionsData: PrescriptionData[] = [
     "condition": "Choque Anafilático",
     "tags": ["anafilaxia", "adrenalina", "choque"],
     "prescriptions": [
-      { "drug": "Adrenalina", "dosage": "0,5mg (>50kg) / 0,3mg (25-50kg) / 0,15mg (10-25kg)", "route": "IM", "frequency": "Dose única no músculo vasto lateral (coxa)." }
+      { "drug": "Adrenalina (Adultos >50kg)", "dosage": "0,5 mg (meia ampola de 1mg/mL)", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." },
+      { "drug": "Adrenalina (Crianças 25-50kg)", "dosage": "0,3 mg", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." },
+      { "drug": "Adrenalina (Crianças 10-25kg)", "dosage": "0,15 mg", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." },
+      { "drug": "Adrenalina (Crianças <10kg)", "dosage": "0,01 mL/kg", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." }
     ],
-    "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas. Não hesite em usar."
+    "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas. A apresentação da ampola é de 1mg/1mL. Não hesite em usar em caso de suspeita de anafilaxia."
   },
   {
     "id": "colangite",
@@ -523,6 +526,21 @@ export const prescriptionsData: PrescriptionData[] = [
     "clinicalNotes": "Objetivo é otimizar volemia e perfusão. Morfina caiu em desuso no EAP. Classificar perfil hemodinâmico (quente/frio, seco/úmido) para guiar terapia."
   },
   {
+    "id": "itu-cistite-pielonefrite",
+    "category": "Infectologia",
+    "condition": "Infecção do Trato Urinário (ITU)",
+    "tags": ["itu", "dor ao urinar", "monuril", "cipro", "rocefin", "nitrofurantoina", "amoxicilina", "clavulanato", "levofloxacino", "bactrim", "pyridium", "piperacilina", "tazobactam", "cefepima", "meropenem"],
+    "prescriptions": [
+      { "drug": "Fosfomicina (Monuril) (Cistite)", "dosage": "3g", "route": "VO", "frequency": "Dose Única." },
+      { "drug": "Nitrofurantoína (Cistite)", "dosage": "100mg", "route": "VO", "frequency": "6/6h por 7 dias." },
+      { "drug": "Ceftriaxona (Pielonefrite)", "dosage": "1g", "route": "IV", "frequency": "1x ao dia por 10-14 dias." },
+      { "drug": "Ciprofloxacino (Pielonefrite)", "dosage": "500mg VO / 400mg IV", "route": "VO/IV", "frequency": "12/12h por 10-14 dias." },
+      { "drug": "Piperacilina+Tazobactam (Pielo com sepse)", "dosage": "4g+500mg", "route": "IV", "frequency": "8/8h por 10-14 dias." },
+      { "drug": "Fenazopiridina (Sintomático)", "dosage": "200mg", "route": "VO", "frequency": "8/8h se disúria." }
+    ],
+    "clinicalNotes": "Solicitar urocultura em casos de pielonefrite ou recorrência."
+  },
+  {
     "id": "intoxicacao-cocaina",
     "category": "Toxicologia",
     "condition": "Intoxicação por Cocaína",
@@ -813,21 +831,6 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Doxiciclina", "dosage": "100mg", "route": "VO", "frequency": "12/12h por 7 dias." }
     ],
     "clinicalNotes": "Tratar parceiros sexuais. Se persistência, pensar em outras causas como Mycoplasma genitalium."
-  },
-  {
-    "id": "itu-cistite-pielonefrite",
-    "category": "Infectologia",
-    "condition": "Infecção do Trato Urinário (ITU)",
-    "tags": ["itu", "dor ao urinar", "monuril", "cipro", "rocefin", "nitrofurantoina", "amoxicilina", "clavulanato", "levofloxacino", "bactrim", "pyridium", "piperacilina", "tazobactam", "cefepima", "meropenem"],
-    "prescriptions": [
-      { "drug": "Fosfomicina (Monuril) (Cistite)", "dosage": "3g", "route": "VO", "frequency": "Dose Única." },
-      { "drug": "Nitrofurantoína (Cistite)", "dosage": "100mg", "route": "VO", "frequency": "6/6h por 7 dias." },
-      { "drug": "Ceftriaxona (Pielonefrite)", "dosage": "1g", "route": "IV", "frequency": "1x ao dia por 10-14 dias." },
-      { "drug": "Ciprofloxacino (Pielonefrite)", "dosage": "500mg VO / 400mg IV", "route": "VO/IV", "frequency": "12/12h por 10-14 dias." },
-      { "drug": "Piperacilina+Tazobactam (Pielo com sepse)", "dosage": "4g+500mg", "route": "IV", "frequency": "8/8h por 10-14 dias." },
-      { "drug": "Fenazopiridina (Sintomático)", "dosage": "200mg", "route": "VO", "frequency": "8/8h se disúria." }
-    ],
-    "clinicalNotes": "Solicitar urocultura em casos de pielonefrite ou recorrência."
   },
   {
     "id": "vaginose-bacteriana",
