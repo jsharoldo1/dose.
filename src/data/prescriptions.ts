@@ -298,5 +298,79 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Ondansetrona", "dosage": "4mg", "route": "IV", "frequency": "8/8h se náuseas/vômitos." }
     ],
     "clinicalNotes": "Prioridade é estabilização hemodinâmica. Investigar causa com colonoscopia após preparo."
+  },
+  {
+    "id": "encefalopatia-hepatica",
+    "category": "Gastroenterologia",
+    "condition": "Encefalopatia Hepática",
+    "tags": ["lactulose", "metronidazol", "rifaximina", "fígado"],
+    "prescriptions": [
+      { "drug": "Lactulose", "dosage": "20-40ml", "route": "VO", "frequency": "12/12h, ajustar p/ 2-3 evacuações/dia." },
+      { "drug": "Metronidazol", "dosage": "400mg", "route": "VO", "frequency": "8/8h por 14 dias." },
+      { "drug": "Rifaximina", "dosage": "550mg", "route": "VO", "frequency": "12/12h por 14 dias." },
+      { "drug": "Aspartato de Ornitina (se refratário)", "dosage": "5g", "route": "VO", "frequency": "12/12h ou 24/24h." }
+    ],
+    "clinicalNotes": "Manter cabeceira elevada e monitorar sinais vitais e nível de consciência."
+  },
+  {
+    "id": "pancreatite-aguda",
+    "category": "Gastroenterologia",
+    "condition": "Pancreatite Aguda",
+    "tags": ["pancreatite", "dieta zero", "ringer lactato", "morfina"],
+    "prescriptions": [
+      { "drug": "Dieta Suspensa", "dosage": "N/A", "route": "N/A", "frequency": "Jejum inicial, ajustar conforme evolução." },
+      { "drug": "Ringer Lactato", "dosage": "20-30 ml/kg", "route": "IV", "frequency": "Em 30 min se hipotensão, seguido de manutenção." },
+      { "drug": "Morfina", "dosage": "0,1mg/kg", "route": "IV", "frequency": "Para controle da dor, se refratária a outros analgésicos." },
+      { "drug": "Ondansetrona", "dosage": "4mg", "route": "IV", "frequency": "8/8h se náuseas/vômitos." },
+      { "drug": "Meropenem (se necrose infectada)", "dosage": "1g", "route": "IV", "frequency": "8/8h." }
+    ],
+    "clinicalNotes": "Hidratação venosa vigorosa é crucial. Solicitar exames para Score de Ranson e monitorar sinais de choque ou falência orgânica."
+  },
+  {
+    "id": "colangite",
+    "category": "Gastroenterologia",
+    "condition": "Colangite",
+    "tags": ["colangite", "infecção", "piperacilina", "tazobactam", "cefepime"],
+    "prescriptions": [
+      { "drug": "Piperacilina + Tazobactam", "dosage": "4,5g", "route": "IV", "frequency": "8/8h." },
+      { "drug": "Cefepima + Metronidazol", "dosage": "2g + 500mg", "route": "IV", "frequency": "8/8h." },
+      { "drug": "Morfina", "dosage": "0,1mg/kg", "route": "IV", "frequency": "Para controle da dor." }
+    ],
+    "clinicalNotes": "Tríade de Charcot (febre, icterícia, dor QSD). Pêntade de Reynolds se choque e confusão mental. Priorizar desobstrução da via biliar (CPRE)."
+  },
+  {
+    "id": "refluxo-gastroesofagico",
+    "category": "Gastroenterologia",
+    "condition": "Refluxo Gastroesofágico (DRGE)",
+    "tags": ["azia", "refluxo", "omeprazol", "domperidona"],
+    "prescriptions": [
+      { "drug": "Omeprazol", "dosage": "20-40mg", "route": "VO", "frequency": "1x/dia em jejum." },
+      { "drug": "Domperidona", "dosage": "10mg", "route": "VO", "frequency": "8/8h, 30 min antes das refeições." }
+    ],
+    "clinicalNotes": "Orientar mudanças de estilo de vida: elevar cabeceira, não deitar após comer, evitar alimentos desencadeantes."
+  },
+  {
+    "id": "anemia-ferropriva",
+    "category": "Hematologia",
+    "condition": "Anemia Ferropriva",
+    "tags": ["anemia", "ferro", "sulfato ferroso", "noripurum"],
+    "prescriptions": [
+      { "drug": "Sulfato Ferroso", "dosage": "300mg (60mg Fe elementar)", "route": "VO", "frequency": "1-3x/dia, antes das refeições." },
+      { "drug": "Hidróxido Férrico (Noripurum)", "dosage": "100-200mg", "route": "IV", "frequency": "Diluir em 250ml SF e infundir em 30 min. 1-3x/semana." }
+    ],
+    "clinicalNotes": "Reposição oral é preferencial. Evitar laticínios junto com o ferro. A reposição IV é para casos de intolerância ou má absorção."
+  },
+  {
+    "id": "cetoacidose-diabetica",
+    "category": "Endocrinologia",
+    "condition": "Cetoacidose Diabética (CAD)",
+    "tags": ["diabetes", "insulina", "cetoacidose", "glicemia alta"],
+    "prescriptions": [
+      { "drug": "Hidratação Venosa (SF 0,9%)", "dosage": "15-20 ml/kg", "route": "IV", "frequency": "Na primeira hora." },
+      { "drug": "Insulina Regular (Ataque)", "dosage": "0,1 UI/kg", "route": "IV Bolus", "frequency": "Dose única inicial." },
+      { "drug": "Insulina Regular (Manutenção)", "dosage": "0,1 UI/kg/h", "route": "IV Contínuo", "frequency": "Em BIC. Ajustar conforme glicemia." },
+      { "drug": "Reposição de Potássio (KCl)", "dosage": "Ajustar conforme K+ sérico", "route": "IV", "frequency": "NÃO iniciar insulina se K+ < 3,3 mEq/L." }
+    ],
+    "clinicalNotes": "Monitorização intensiva de glicemia capilar (1/1h), eletrólitos e gasometria. Adicionar SG 5% à hidratação quando glicemia < 250 mg/dL."
   }
 ];
