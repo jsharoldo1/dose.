@@ -19,14 +19,14 @@ export const prescriptionsData: PrescriptionData[] = [
   {
     "id": "taquicardia-supraventricular",
     "category": "Cardiologia",
-    "condition": "Taquicardia Supraventricular (TSV)",
+    "condition": "Taquicardia Supraventricular (Estável)",
     "tags": ["arritmia", "adenosina", "metoprolol", "coração acelerado", "tsv"],
     "prescriptions": [
       { "drug": "Manobra Vagal", "dosage": "N/A", "route": "Físico", "frequency": "Tentativa inicial em pacientes estáveis." },
       { "drug": "Adenosina", "dosage": "6mg", "route": "IV Bolus Rápido", "frequency": "Seguido de flush 20ml SF. Se falha, administrar 12mg." },
       { "drug": "Metoprolol", "dosage": "2.5-5mg", "route": "IV Lento", "frequency": "Repetir a cada 5 min até dose máxima de 15mg." }
     ],
-    "clinicalNotes": "Em caso de instabilidade hemodinâmica (hipotensão, choque, dor torácica, dispneia), proceder com cardioversão elétrica sincronizada."
+    "clinicalNotes": "Em caso de instabilidade hemodinâmica (hipotensão, choque, dor torácica, dispneia), proceder com cardioversão elétrica sincronizada. Evitar em pacientes com doença pulmonar descompensada. Casos extremos podem cursar com assistolia."
   },
   {
     "id": "taquicardia-ventricular",
@@ -44,14 +44,16 @@ export const prescriptionsData: PrescriptionData[] = [
     "id": "fibrilacao-atrial",
     "category": "Cardiologia",
     "condition": "Fibrilação Atrial (FA) / Flutter",
-    "tags": ["arritmia", "fa", "flutter", "metoprolol", "verapamil", "deslanosideo"],
+    "tags": ["arritmia", "fa", "flutter", "metoprolol", "verapamil", "deslanosideo", "amiodarona", "propafenona"],
     "prescriptions": [
-      { "drug": "Metoprolol", "dosage": "5mg", "route": "IV", "frequency": "Em 2 min. Repetir a cada 5 min até máx 20mg para controle de frequência." },
-      { "drug": "Verapamil", "dosage": "5-10mg", "route": "IV", "frequency": "Em 2-5 min. Repetir após 30 min se necessário para controle de frequência." },
-      { "drug": "Deslanosídeo", "dosage": "0.4-0.8mg", "route": "IV Lento", "frequency": "Dose única para controle de frequência." },
-      { "drug": "Amiodarona (Cardioversão Química)", "dosage": "5-7 mg/kg", "route": "IV", "frequency": "Em 30-60 min, para reversão do ritmo." }
+      { "drug": "Metoprolol (Controle de Frequência)", "dosage": "5mg", "route": "IV", "frequency": "Em 2 min. Repetir a cada 5 min até máx 20mg." },
+      { "drug": "Verapamil (Controle de Frequência)", "dosage": "5-10mg", "route": "IV", "frequency": "Em 2-5 min. Repetir após 30 min se necessário." },
+      { "drug": "Deslanosídeo (Controle de Frequência)", "dosage": "0.4-0.8mg", "route": "IV Lento", "frequency": "Dose única." },
+      { "drug": "Amiodarona (Cardioversão Química)", "dosage": "5-7 mg/kg", "route": "IV", "frequency": "Em 30-60 min, para reversão do ritmo." },
+      { "drug": "Amiodarona (Pós-cardioversão)", "dosage": "300mg", "route": "VO", "frequency": "12/12h. Preferível em pacientes com IC." },
+      { "drug": "Propafenona (Pós-cardioversão)", "dosage": "300mg", "route": "VO", "frequency": "12/12h. Preferível sem doença cardíaca estrutural." }
     ],
-    "clinicalNotes": "Atenção à anticoagulação. Não cardioverter FA com mais de 48h sem exclusão de trombo atrial. Priorizar controle de frequência em pacientes estáveis."
+    "clinicalNotes": "Atenção à anticoagulação. Não cardioverter FA com mais de 48h sem exclusão de trombo atrial. Priorizar controle de frequência em pacientes estáveis. Em instáveis, realizar cardioversão elétrica."
   },
   {
     "id": "iam-sca",
@@ -83,7 +85,7 @@ export const prescriptionsData: PrescriptionData[] = [
     "id": "ic-descompensada",
     "category": "Cardiologia",
     "condition": "IC Descompensada / Edema Agudo de Pulmão (EAP)",
-    "tags": ["falta de ar", "furosemida", "lasix", "congestão", "eap", "ic"],
+    "tags": ["falta de ar", "furosemida", "lasix", "congestão", "eap", "ic", "nipride", "tridil", "dobutamina"],
     "prescriptions": [
       { "drug": "Furosemida", "dosage": "1 a 1.5mg/kg", "route": "IV em Bolus", "frequency": "Dose de ataque. Manter balanço hídrico negativo." },
       { "drug": "Nitroprussiato (Nipride)", "dosage": "0.25-0.5mcg/kg/min", "route": "IV Contínuo", "frequency": "Para vasodilatação. Controlar PA rigorosamente. Fotossensível." },
@@ -94,41 +96,58 @@ export const prescriptionsData: PrescriptionData[] = [
     "clinicalNotes": "Objetivo é otimizar volemia e perfusão. Morfina caiu em desuso no EAP. Classificar perfil hemodinâmico (quente/frio, seco/úmido) para guiar terapia."
   },
   {
-    "id": "cefaleia-enxaqueca",
+    "id": "cefaleia-primaria",
     "category": "Neurologia",
-    "condition": "Cefaleia / Enxaqueca Aguda",
-    "tags": ["dor de cabeça", "dipirona", "dexametasona", "profenid"],
+    "condition": "Cefaleia Primária",
+    "tags": ["dor de cabeça", "dipirona", "ibuprofeno", "paracetamol", "cetoprofeno"],
     "prescriptions": [
-      { "drug": "Cetoprofeno (Profenid)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100ml SF, correr em 20 min." },
-      { "drug": "Dexametasona", "dosage": "10mg (1 amp)", "route": "IV ou IM", "frequency": "Dose única (previne recorrência)." },
-      { "drug": "Dipirona", "dosage": "1g", "route": "IV", "frequency": "Lento." },
-      { "drug": "Sumatriptano", "dosage": "6mg", "route": "SC (Subcutâneo)", "frequency": "Se disponível. Específico para enxaqueca." }
+      { "drug": "Cetoprofeno (Profenid)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100ml SF 0.9% e correr em 20 min." },
+      { "drug": "Dexametasona", "dosage": "10mg", "route": "IV ou IM", "frequency": "Dose única." },
+      { "drug": "Ibuprofeno", "dosage": "400mg", "route": "VO", "frequency": "Até de 6/6h." },
+      { "drug": "Dipirona", "dosage": "1g", "route": "VO", "frequency": "De 6/6h." },
+      { "drug": "Paracetamol", "dosage": "750mg", "route": "VO", "frequency": "De 8/8h." }
     ],
-    "clinicalNotes": "Descartar sinais de alarme (Red Flags) antes de tratar apenas a dor."
+    "clinicalNotes": "Atentar para cefaleia por abuso de analgésicos. Descartar sinais de alarme antes de tratar."
+  },
+  {
+    "id": "enxaqueca",
+    "category": "Neurologia",
+    "condition": "Enxaqueca Aguda",
+    "tags": ["dor de cabeça", "enxaqueca", "sumatriptano", "naproxeno", "sumax"],
+    "prescriptions": [
+      { "drug": "Sumatriptano", "dosage": "6mg", "route": "SC", "frequency": "Pode repetir após 1h. Máximo 2 doses/dia." },
+      { "drug": "Cetoprofeno (Profenid)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100ml SF e correr em 20 min." },
+      { "drug": "Dexametasona", "dosage": "10mg", "route": "IV ou IM", "frequency": "Dose única." },
+      { "drug": "Sumatriptano + Naproxeno", "dosage": "50/500mg", "route": "VO", "frequency": "No início da crise. Repetir após 2h se necessário." },
+      { "drug": "Naproxeno", "dosage": "500mg", "route": "VO", "frequency": "Até de 12/12h." }
+    ],
+    "clinicalNotes": "Sumatriptano SC é pouco disponível no PS. Atentar para cefaleia por abuso de analgésicos."
+  },
+  {
+    "id": "vertigem",
+    "category": "Neurologia",
+    "condition": "Vertigem Aguda",
+    "tags": ["tontura", "labirintite", "dramin", "cinarizina", "meclizina"],
+    "prescriptions": [
+      { "drug": "Dimenidrato + Piridoxina (Dramin B6)", "dosage": "50mg", "route": "IV ou VO", "frequency": "De 6/6h. IV causa sonolência." },
+      { "drug": "Cinarizina", "dosage": "25mg", "route": "VO", "frequency": "De 8/8h." },
+      { "drug": "Meclozina", "dosage": "50mg", "route": "VO", "frequency": "De 8/8h." }
+    ],
+    "clinicalNotes": "Medicamentos para suprimir o sistema vestibular: anti-histamínicos, benzodiazepínicos e antieméticos. Diferenciar vertigem central (AVC) de periférica."
   },
   {
     "id": "crise-convulsiva",
     "category": "Neurologia",
     "condition": "Crise Convulsiva / Status Epilepticus",
-    "tags": ["convulsão", "diazepam", "hidantal", "ataque"],
+    "tags": ["convulsão", "ataque", "diazepam", "midazolam", "hidantal", "fenobarbital"],
     "prescriptions": [
-      { "drug": "1º Passo: Diazepam", "dosage": "10mg", "route": "IV", "frequency": "Lento (2mg/min). Pode repetir 1x." },
-      { "drug": "2º Passo: Fenitoína (Hidantal)", "dosage": "20mg/kg", "route": "IV", "frequency": "Diluir em SF (não usar SG!). Vel máx 50mg/min. Monitorar hipotensão/arritmia." },
-      { "drug": "3º Passo: Fenobarbital", "dosage": "20mg/kg", "route": "IV", "frequency": "Se refratário à fenitoína." }
+      { "drug": "Diazepam (1º Passo)", "dosage": "10mg", "route": "IV Lento", "frequency": "Pode repetir 1x após 5 min se refratário." },
+      { "drug": "Midazolam (Alternativa)", "dosage": "10mg", "route": "IM", "frequency": "Opção na falta de acesso venoso." },
+      { "drug": "Fenitoína (Hidantal) (2º Passo)", "dosage": "5-10mg/kg", "route": "IV", "frequency": "Diluir em SF 0,9% (não usar SG!). Se refratário após 10 min." },
+      { "drug": "Fenobarbital (3º Passo)", "dosage": "10mg/kg", "route": "IV", "frequency": "Diluir em SF 0,9%." },
+      { "drug": "Intubação Orotraqueal (Refratário)", "dosage": "N/A", "route": "Procedimento", "frequency": "Com Midazolam, Propofol ou Tiopental." }
     ],
-    "clinicalNotes": "Se acesso difícil, Midazolam IM (10mg) é alternativa inicial."
-  },
-  {
-    "id": "vertigem-tontura",
-    "category": "Neurologia",
-    "condition": "Vertigem / Tontura Aguda",
-    "tags": ["labirintite", "dramin", "cinarizina"],
-    "prescriptions": [
-      { "drug": "Dimenidrato (Dramin B6)", "dosage": "50mg", "route": "IV", "frequency": "Diluir e fazer lento (causa sonolência)." },
-      { "drug": "Cinarizina", "dosage": "25mg", "route": "VO", "frequency": "De 8/8h para manutenção." },
-      { "drug": "Meclozina", "dosage": "50mg", "route": "VO", "frequency": "De 8/8h." }
-    ],
-    "clinicalNotes": "Diferenciar vertigem central (AVC) de periférica. HINTS exam se necessário."
+    "clinicalNotes": "Garantir via aérea pérvia e monitorização. Tratar causa base."
   },
   {
     "id": "agitacao-psicomotora",
