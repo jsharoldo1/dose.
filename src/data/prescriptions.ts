@@ -384,5 +384,231 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Ciclobenzaprina (Miosan)", "dosage": "10mg", "route": "VO", "frequency": "12/12h, por 5 dias." }
     ],
     "clinicalNotes": "Aplicar calor local. Orientar repouso relativo e evitar fatores de piora."
+  },
+  {
+    "id": "candidíase-vaginal",
+    "category": "Ginecologia",
+    "condition": "Candidíase Vaginal",
+    "tags": ["candidiase", "corrimento", "clotrimazol", "fluconazol", "miconazol"],
+    "prescriptions": [
+      { "drug": "Clotrimazol (creme)", "dosage": "1 aplicador (5g)", "route": "Endovaginal", "frequency": "Ao deitar, por 6 dias." },
+      { "drug": "Miconazol (creme)", "dosage": "1 aplicador (5g)", "route": "Endovaginal", "frequency": "Ao deitar, por 14 dias." },
+      { "drug": "Fluconazol", "dosage": "150mg", "route": "VO", "frequency": "Dose única." },
+      { "drug": "Itraconazol", "dosage": "200mg (2 cp)", "route": "VO", "frequency": "Dose única." }
+    ],
+    "clinicalNotes": "Orientar o paciente a aplicar o creme o mais profundo possível na vagina."
+  },
+  {
+    "id": "vaginose-bacteriana",
+    "category": "Ginecologia",
+    "condition": "Vaginose Bacteriana",
+    "tags": ["vaginose", "corrimento", "metronidazol", "clindamicina"],
+    "prescriptions": [
+      { "drug": "Metronidazol", "dosage": "500mg (2 cp de 250mg)", "route": "VO", "frequency": "12/12h por 7 dias." },
+      { "drug": "Clindamicina", "dosage": "300mg (2 cp de 150mg)", "route": "VO", "frequency": "12/12h por 7 dias." }
+    ],
+    "clinicalNotes": "Em caso de recorrência, considerar tratamento estendido com metronidazol por 10-14 dias."
+  },
+  {
+    "id": "tricomoniase",
+    "category": "Ginecologia",
+    "condition": "Tricomoníase",
+    "tags": ["tricomoniase", "corrimento", "metronidazol"],
+    "prescriptions": [
+      { "drug": "Metronidazol", "dosage": "2g (5 cp de 400mg)", "route": "VO", "frequency": "Dose única." },
+      { "drug": "Metronidazol", "dosage": "500mg (2 cp de 250mg)", "route": "VO", "frequency": "12/12h por 7 dias." }
+    ],
+    "clinicalNotes": "É fundamental tratar parceiros sexuais para evitar reinfecção."
+  },
+  {
+    "id": "uretrite-gonococica",
+    "category": "Infectologia",
+    "condition": "Uretrite Gonocócica",
+    "tags": ["uretrite", "gonorreia", "ceftriaxona", "azitromicina"],
+    "prescriptions": [
+      { "drug": "Ceftriaxona", "dosage": "500mg", "route": "IM", "frequency": "Dose única." },
+      { "drug": "Azitromicina", "dosage": "1g (2 cp de 500mg)", "route": "VO", "frequency": "Dose única (associar)." }
+    ],
+    "clinicalNotes": "Sempre tratar para gonococo e clamídia (com Azitromicina) devido à alta taxa de coinfecção."
+  },
+  {
+    "id": "uretrite-nao-gonococica",
+    "category": "Infectologia",
+    "condition": "Uretrite Não Gonocócica (Clamídia)",
+    "tags": ["uretrite", "clamidia", "azitromicina", "doxiciclina"],
+    "prescriptions": [
+      { "drug": "Azitromicina", "dosage": "1g (2 cp de 500mg)", "route": "VO", "frequency": "Dose única." },
+      { "drug": "Doxiciclina", "dosage": "100mg", "route": "VO", "frequency": "12/12h por 7 dias." }
+    ],
+    "clinicalNotes": "Tratar parceiros sexuais. Se persistência, pensar em outras causas como Mycoplasma genitalium."
+  },
+  {
+    "id": "colica-nefretica",
+    "category": "Nefrologia",
+    "condition": "Cólica Nefrética (Ureterolitíase)",
+    "tags": ["pedra nos rins", "cólica renal", "cetoprofeno", "tansulosina", "buscopan"],
+    "prescriptions": [
+      { "drug": "Cetoprofeno (Profenid)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100ml SF, correr em 20 min." },
+      { "drug": "Dipirona", "dosage": "1g", "route": "IV Lento", "frequency": "Se dor." },
+      { "drug": "Tansulosina", "dosage": "0,4mg", "route": "VO", "frequency": "1x ao dia, por até 14 dias (ajuda a expelir o cálculo)." }
+    ],
+    "clinicalNotes": "Hidratação e analgesia são pilares. Orientar retorno se febre, dor incontrolável ou anúria. Cálculos > 10mm geralmente necessitam de intervenção."
+  },
+  {
+    "id": "acatasia",
+    "category": "Psiquiatria",
+    "condition": "Acatisia",
+    "tags": ["inquietação", "propranolol", "clonazepam", "biperideno"],
+    "prescriptions": [
+      { "drug": "Propranolol", "dosage": "10mg", "route": "VO", "frequency": "2x ao dia. Pode aumentar até 60mg/dia." },
+      { "drug": "Clonazepam", "dosage": "0,5 a 2,5mg", "route": "VO", "frequency": "Dose diária." },
+      { "drug": "Lorazepam", "dosage": "0,5mg", "route": "VO", "frequency": "2x ao dia. Dose máxima 6-10mg/dia." }
+    ],
+    "clinicalNotes": "Contraindicado em asma e DPOC. Avaliar retirada do agente causador (geralmente antipsicóticos)."
+  },
+  {
+    "id": "sindrome-psicotica",
+    "category": "Psiquiatria",
+    "condition": "Síndrome Psicótica",
+    "tags": ["psicose", "haloperidol", "risperidona", "olanzapina"],
+    "prescriptions": [
+      { "drug": "Haloperidol", "dosage": "1 a 5mg", "route": "VO ou IM", "frequency": "Dose máxima de 40mg/dia." },
+      { "drug": "Risperidona", "dosage": "2 a 8mg", "route": "VO", "frequency": "Aumentar 1mg/dia se necessário. Máx 16mg/dia." },
+      { "drug": "Olanzapina", "dosage": "10 a 20mg", "route": "VO", "frequency": "Aumentar 5mg/semana se necessário. Máx 20mg/dia." },
+      { "drug": "Prometazina (adjuvante)", "dosage": "50mg", "route": "IM", "frequency": "Repetir a cada 30min até 3x se necessário." }
+    ],
+    "clinicalNotes": "Atentar para síndromes extrapiramidais com Haloperidol. Benzodiazepínicos podem ser adjuvantes para ansiedade/insônia."
+  },
+  {
+    "id": "delirium",
+    "category": "Psiquiatria",
+    "condition": "Delirium (Misto ou Hiperativo)",
+    "tags": ["confusão mental", "haloperidol", "risperidona", "quetiapina"],
+    "prescriptions": [
+      { "drug": "Haloperidol", "dosage": "0,5 a 5mg", "route": "VO, IM ou EV", "frequency": "Repetir a cada 30min até estabilização. Máx 5mg/dia." },
+      { "drug": "Risperidona", "dosage": "0,5 a 6mg/dia", "route": "VO", "frequency": "Iniciar com 0,5mg à noite e ajustar." },
+      { "drug": "Olanzapina", "dosage": "2,5 a 7,5mg/dia", "route": "VO", "frequency": "Iniciar com 5mg à noite e ajustar." },
+      { "drug": "Quetiapina", "dosage": "12,5 a 150mg/dia", "route": "VO", "frequency": "Iniciar com 25mg à noite e ajustar." }
+    ],
+    "clinicalNotes": "Evitar Haloperidol se QTc > 500ms. O mais importante é tratar a causa base do delirium."
+  },
+  {
+    "id": "sindrome-serotoninergica",
+    "category": "Psiquiatria",
+    "condition": "Síndrome Serotoninérgica",
+    "tags": ["serotonina", "diazepam", "ciproeptadina", "toxicologia"],
+    "prescriptions": [
+      { "drug": "Diazepam", "dosage": "0,1 a 0,2 mg/Kg", "route": "IV", "frequency": "Repetir de 8/8h até melhora dos sintomas." },
+      { "drug": "Ringer Lactato", "dosage": "20 a 30 ml/kg", "route": "IV", "frequency": "Para casos moderados/graves, com meta de diurese." },
+      { "drug": "Ciproeptadina", "dosage": "12 mg (inicial)", "route": "VO ou SNG", "frequency": "Repetir 2mg a cada 2h se necessário. Máx 32mg/dia." }
+    ],
+    "clinicalNotes": "Retirada do agente serotoninérgico é fundamental. Evitar contenção mecânica pelo risco de rabdomiólise."
+  },
+  {
+    "id": "sindrome-neuroleptica-maligna",
+    "category": "Psiquiatria",
+    "condition": "Síndrome Neuroléptica Maligna",
+    "tags": ["snm", "bromocriptina", "dantroleno", "amantadina", "toxicologia"],
+    "prescriptions": [
+      { "drug": "Bromocriptina", "dosage": "2 a 10 mg", "route": "VO ou SNG", "frequency": "A cada 8 horas, por até 10 dias." },
+      { "drug": "Amantadina", "dosage": "100 mg", "route": "VO ou SNG", "frequency": "Alternativa à bromocriptina. Máx 400mg/dia." },
+      { "drug": "Dantroleno sódico", "dosage": "1 a 10 mg/kg", "route": "IV", "frequency": "Por 8 dias, se hipertermia ou rigidez extrema." }
+    ],
+    "clinicalNotes": "Medida mais importante é a suspensão do antipsicótico. Dantroleno é contraindicado se disfunção hepática."
+  },
+  {
+    "id": "crise-ansiedade-panico",
+    "category": "Psiquiatria",
+    "condition": "Ansiedade Aguda / Crise de Pânico",
+    "tags": ["ansiedade", "pânico", "clonazepam", "lorazepam", "diazepam"],
+    "prescriptions": [
+      { "drug": "Clonazepam", "dosage": "2 mg", "route": "VO", "frequency": "Manutenção: 0,25 a 4 mg/dia." },
+      { "drug": "Lorazepam", "dosage": "0,5 a 2 mg", "route": "VO", "frequency": "Manutenção: 2 a 3 mg/dia." },
+      { "drug": "Diazepam", "dosage": "5 a 10 mg", "route": "VO", "frequency": "Manutenção: 5 a 40 mg/dia." },
+      { "drug": "Alprazolam", "dosage": "0,25 a 1 mg", "route": "VO", "frequency": "Manutenção: 0,5 a 4 mg/dia." }
+    ],
+    "clinicalNotes": "Benzodiazepínicos são para alívio agudo. O tratamento a longo prazo deve envolver ISRS e terapia."
+  },
+  {
+    "id": "hipercalemia",
+    "category": "Nefrologia",
+    "condition": "Hipercalemia (Potássio Alto)",
+    "tags": ["potássio", "gluconato de cálcio", "glicoinsulina", "sorcal"],
+    "prescriptions": [
+      { "drug": "Gluconato de Cálcio 10%", "dosage": "1 ampola (10mL)", "route": "IV", "frequency": "Diluir em 50-100mL SF e correr em 3-5 min (se alteração no ECG)." },
+      { "drug": "Solução Polarizante", "dosage": "Insulina Regular 10UI + SG 50% 100mL", "route": "IV", "frequency": "Correr em 1h. Medida para baixar o potássio." },
+      { "drug": "Salbutamol (Nebulização)", "dosage": "40 gotas", "route": "Inalatório", "frequency": "Diluir em 3-5mL SF e nebulizar." },
+      { "drug": "Sorcal (Poliestirenosulfonato)", "dosage": "30g", "route": "VO", "frequency": "Diluir em 100ml de água ou manitol 10%." }
+    ],
+    "clinicalNotes": "Gluconato de cálcio não baixa o potássio, apenas estabiliza a membrana cardíaca. Hemodiálise em casos refratários ou urgência."
+  },
+  {
+    "id": "hipocalemia",
+    "category": "Nefrologia",
+    "condition": "Hipocalemia (Potássio Baixo)",
+    "tags": ["potássio", "kcl", "slow-k"],
+    "prescriptions": [
+      { "drug": "KCl Xarope 6%", "dosage": "10 a 30 mL", "route": "VO", "frequency": "De 6/6h (casos leves)." },
+      { "drug": "KCl Comprimido", "dosage": "1 cp (600mg)", "route": "VO", "frequency": "Após refeições, 6/6h (casos leves)." },
+      { "drug": "KCl 10% (Reposição IV)", "dosage": "2 ampolas (20mL)", "route": "IV", "frequency": "Diluir em 500ml SF e correr em 2-3h (acesso periférico)." }
+    ],
+    "clinicalNotes": "Em acesso central, pode-se usar concentrações maiores (ex: 4 ampolas em 500mL SF)."
+  },
+  {
+    "id": "hiponatremia",
+    "category": "Nefrologia",
+    "condition": "Hiponatremia (Sódio Baixo)",
+    "tags": ["sódio", "solução salina", "nacl"],
+    "prescriptions": [
+      { "drug": "Solução Salina 3%", "dosage": "Cálculo complexo", "route": "IV", "frequency": "890mL NaCl 0,9% + 110mL NaCl 20%. Infusão em BIC." }
+    ],
+    "clinicalNotes": "A correção deve ser lenta (máx 8-12 mEq/L em 24h) para evitar mielinólise pontina. O cálculo da velocidade de infusão é complexo e depende do sódio do paciente e da água corporal total."
+  },
+  {
+    "id": "hipernatremia",
+    "category": "Nefrologia",
+    "condition": "Hipernatremia (Sódio Alto)",
+    "tags": ["sódio", "soro glicosado", "ringer lactato"],
+    "prescriptions": [
+      { "drug": "Hidratação Inicial", "dosage": "Conforme volemia", "route": "IV", "frequency": "Ringer Lactato ou SF 0,9% para estabilizar." },
+      { "drug": "Soro Glicosado 5% ou SF 0,45%", "dosage": "Cálculo complexo", "route": "IV", "frequency": "Para correção do sódio livre de água, infusão em BIC." }
+    ],
+    "clinicalNotes": "A correção deve ser lenta (máx 8-12 mEq/L em 24h) para evitar edema cerebral. O cálculo da velocidade de infusão é complexo."
+  },
+  {
+    "id": "hipocalcemia",
+    "category": "Endocrinologia",
+    "condition": "Hipocalcemia (Cálcio Baixo)",
+    "tags": ["cálcio", "gluconato de cálcio"],
+    "prescriptions": [
+      { "drug": "Gluconato de Cálcio 10%", "dosage": "1 ampola (10mL)", "route": "IV", "frequency": "Diluir em 50-100mL SF e correr em 1h (se sintomático)." },
+      { "drug": "Reposição de Manutenção", "dosage": "5 ampolas (50mL)", "route": "IV", "frequency": "Diluir em 500mL SF e correr em 5-10h." },
+      { "drug": "Reposição Oral", "dosage": "1000-2600 mg/dia", "route": "VO", "frequency": "Se assintomático." }
+    ],
+    "clinicalNotes": "Corrigir hiperfosfatemia associada antes de infundir cálcio para evitar precipitação."
+  },
+  {
+    "id": "hipercalcemia",
+    "category": "Endocrinologia",
+    "condition": "Hipercalcemia (Cálcio Alto)",
+    "tags": ["cálcio", "pamidronato", "ácido zoledrônico"],
+    "prescriptions": [
+      { "drug": "Hidratação Vigorosa", "dosage": "200 a 500 mL/h", "route": "IV", "frequency": "Conforme tolerância do paciente." },
+      { "drug": "Pamidronato", "dosage": "60-90 mg", "route": "IV", "frequency": "A cada 4 horas." },
+      { "drug": "Ácido Zoledrônico", "dosage": "4mg", "route": "IV", "frequency": "Correr em 15 minutos." }
+    ],
+    "clinicalNotes": "Pode-se associar diurético de alça (Furosemida) após início da hidratação para aumentar a calciúria."
+  },
+  {
+    "id": "hipomagnesemia",
+    "category": "Nefrologia",
+    "condition": "Hipomagnesemia (Magnésio Baixo)",
+    "tags": ["magnésio", "sulfato de magnésio", "torsades"],
+    "prescriptions": [
+      { "drug": "Sulfato de Magnésio 10% (Torsades)", "dosage": "2 ampolas (20mL)", "route": "IV", "frequency": "Diluir em 100mL SG 5% e correr em 2-5 min." },
+      { "drug": "Sulfato de Magnésio 10% (Manutenção)", "dosage": "4 ampolas (40mL)", "route": "IV", "frequency": "Diluir em 460mL SF 0,9% e correr em 12-24h." },
+      { "drug": "Óxido de Magnésio (Leve)", "dosage": "800-1600 mg/dia", "route": "VO", "frequency": "Dividido em 3-4 doses." }
+    ],
+    "clinicalNotes": "A reposição máxima recomendada é de 6g de Sulfato de Magnésio por dia."
   }
 ]
