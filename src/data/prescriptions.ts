@@ -150,56 +150,6 @@ export const prescriptionsData: PrescriptionData[] = [
     "clinicalNotes": "Garantir via aérea pérvia e monitorização. Tratar causa base."
   },
   {
-    "id": "agitacao-psicomotora",
-    "category": "Psiquiatria",
-    "condition": "Agitação Psicomotora / Agressividade",
-    "tags": ["surto", "haldol", "fernegan", "contencao"],
-    "prescriptions": [
-      { "drug": "Haldol (Haloperidol)", "dosage": "5mg", "route": "IM", "frequency": "Antipsicótico incisivo." },
-      { "drug": "Prometazina (Fenergan)", "dosage": "50mg", "route": "IM", "frequency": "Sedativo e previne distonia do Haldol." },
-      { "drug": "Midazolam", "dosage": "5-15mg", "route": "IM", "frequency": "Se agitação extrema (risco p/ equipe)." }
-    ],
-    "clinicalNotes": "Combo 'Haldol 5 + Fenergan 50' IM é o padrão ouro. Evitar contenção física sem sedação."
-  },
-  {
-    "id": "crise-asmatica",
-    "category": "Respiratório",
-    "condition": "Crise Asmática / Broncoespasmo",
-    "tags": ["asma", "aerolin", "berotec", "falta de ar", "ipratropio", "atrovent"],
-    "prescriptions": [
-      { "drug": "Salbutamol (Aerolin) Spray", "dosage": "4 a 10 jatos", "route": "Inalatório", "frequency": "A cada 20 min na 1ª hora (com espaçador)." },
-      { "drug": "Ipratrópio (Atrovent)", "dosage": "4 jatos (ou 40 gotas nebu)", "route": "Inalatório", "frequency": "Adjuvante na crise moderada/grave." },
-      { "drug": "Prednisolona", "dosage": "40-60mg", "route": "VO", "frequency": "Dose única ou Hidrocortisona 200mg IV se grave." },
-      { "drug": "Sulfato de Magnésio", "dosage": "2g", "route": "IV", "frequency": "Em 20 min (Crise Grave/Refratária)." }
-    ],
-    "clinicalNotes": "Oxigênio para manter Sat > 93-95%."
-  },
-  {
-    "id": "pneumonia-comunidade",
-    "category": "Respiratório",
-    "condition": "Pneumonia Adquirida na Comunidade (PAC)",
-    "tags": ["infecção", "clavulin", "amoxicilina", "azitromicina", "ceftriaxona"],
-    "prescriptions": [
-      { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 7 dias (Ambulatorial)." },
-      { "drug": "Azitromicina", "dosage": "500mg", "route": "VO", "frequency": "1x ao dia por 5 dias (Associação ou monoterapia se leve)." },
-      { "drug": "Ceftriaxona", "dosage": "1g a 2g", "route": "IV", "frequency": "1x ao dia (Internação) + Claritromicina 500mg 12/12h." }
-    ],
-    "clinicalNotes": "Usar CURB-65 para decidir internação. Considerar fatores de risco para germes atípicos."
-  },
-  {
-    "id": "itu-cistite-pielonefrite",
-    "category": "Infectologia",
-    "condition": "Infecção Urinária (Cistite / Pielonefrite)",
-    "tags": ["itu", "dor ao urinar", "monuril", "cipro", "rocefin"],
-    "prescriptions": [
-      { "drug": "Fosfomicina (Monuril)", "dosage": "3g", "route": "VO", "frequency": "Dose Única (Cistite não complicada)." },
-      { "drug": "Nitrofurantoína", "dosage": "100mg", "route": "VO", "frequency": "6/6h por 5-7 dias (Cistite)." },
-      { "drug": "Ceftriaxona", "dosage": "1g", "route": "IV", "frequency": "1x ao dia (Pielonefrite)." },
-      { "drug": "Ciprofloxacino", "dosage": "500mg", "route": "VO", "frequency": "12/12h (Opção para Pielonefrite, evitar na cistite simples)." }
-    ],
-    "clinicalNotes": "Solicitar urocultura em casos de pielonefrite ou recorrência."
-  },
-  {
     "id": "otite-media-aguda",
     "category": "Respiratório",
     "condition": "Otite Média Aguda",
@@ -238,6 +188,19 @@ export const prescriptionsData: PrescriptionData[] = [
     "clinicalNotes": "Benzetacil é o tratamento de escolha para erradicar o Streptococo e prevenir febre reumática."
   },
   {
+    "id": "crise-asmatica",
+    "category": "Respiratório",
+    "condition": "Crise Asmática / Broncoespasmo",
+    "tags": ["asma", "aerolin", "berotec", "falta de ar", "ipratropio", "atrovent"],
+    "prescriptions": [
+      { "drug": "Salbutamol (Aerolin) Spray", "dosage": "4 a 10 jatos", "route": "Inalatório", "frequency": "A cada 20 min na 1ª hora (com espaçador)." },
+      { "drug": "Ipratrópio (Atrovent)", "dosage": "4 jatos (ou 40 gotas nebu)", "route": "Inalatório", "frequency": "Adjuvante na crise moderada/grave." },
+      { "drug": "Prednisolona", "dosage": "40-60mg", "route": "VO", "frequency": "Dose única ou Hidrocortisona 200mg IV se grave." },
+      { "drug": "Sulfato de Magnésio", "dosage": "2g", "route": "IV", "frequency": "Em 20 min (Crise Grave/Refratária)." }
+    ],
+    "clinicalNotes": "Oxigênio para manter Sat > 93-95%."
+  },
+  {
     "id": "dpoc-exacerbado",
     "category": "Respiratório",
     "condition": "DPOC Exacerbado",
@@ -249,6 +212,18 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 7 dias (se critérios de infecção)." }
     ],
     "clinicalNotes": "Antibióticos indicados se houver aumento do volume e/ou purulência do escarro, ou necessidade de ventilação mecânica."
+  },
+  {
+    "id": "pneumonia-comunidade",
+    "category": "Respiratório",
+    "condition": "Pneumonia Adquirida na Comunidade (PAC)",
+    "tags": ["infecção", "clavulin", "amoxicilina", "azitromicina", "ceftriaxona"],
+    "prescriptions": [
+      { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 7 dias (Ambulatorial)." },
+      { "drug": "Azitromicina", "dosage": "500mg", "route": "VO", "frequency": "1x ao dia por 5 dias (Associação ou monoterapia se leve)." },
+      { "drug": "Ceftriaxona", "dosage": "1g a 2g", "route": "IV", "frequency": "1x ao dia (Internação) + Claritromicina 500mg 12/12h." }
+    ],
+    "clinicalNotes": "Usar CURB-65 para decidir internação. Considerar fatores de risco para germes atípicos."
   },
   {
     "id": "tvp-tep",
@@ -374,19 +349,20 @@ export const prescriptionsData: PrescriptionData[] = [
     "clinicalNotes": "Monitorização intensiva de glicemia capilar (1/1h), eletrólitos e gasometria. Adicionar SG 5% à hidratação quando glicemia < 250 mg/dL."
   },
   {
-    "id": "lombalgia-mecanica",
-    "category": "Ortopedia",
-    "condition": "Lombalgia Mecânica / Torcicolo",
-    "tags": ["dor nas costas", "lombalgia", "relaxante muscular", "torsilax", "miosan"],
+    "id": "itu-cistite-pielonefrite",
+    "category": "Infectologia",
+    "condition": "Infecção Urinária (Cistite / Pielonefrite)",
+    "tags": ["itu", "dor ao urinar", "monuril", "cipro", "rocefin"],
     "prescriptions": [
-      { "drug": "Cetoprofeno (IV)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100mL SF 0,9%, correr em 20 min." },
-      { "drug": "Torsilax (ou similar)", "dosage": "1 cp", "route": "VO", "frequency": "12/12h ou 8/8h, por no máximo 7 dias." },
-      { "drug": "Ciclobenzaprina (Miosan)", "dosage": "10mg", "route": "VO", "frequency": "12/12h, por 5 dias." }
+      { "drug": "Fosfomicina (Monuril)", "dosage": "3g", "route": "VO", "frequency": "Dose Única (Cistite não complicada)." },
+      { "drug": "Nitrofurantoína", "dosage": "100mg", "route": "VO", "frequency": "6/6h por 5-7 dias (Cistite)." },
+      { "drug": "Ceftriaxona", "dosage": "1g", "route": "IV", "frequency": "1x ao dia (Pielonefrite)." },
+      { "drug": "Ciprofloxacino", "dosage": "500mg", "route": "VO", "frequency": "12/12h (Opção para Pielonefrite, evitar na cistite simples)." }
     ],
-    "clinicalNotes": "Aplicar calor local. Orientar repouso relativo e evitar fatores de piora."
+    "clinicalNotes": "Solicitar urocultura em casos de pielonefrite ou recorrência."
   },
   {
-    "id": "candidíase-vaginal",
+    "id": "candidiase-vaginal",
     "category": "Ginecologia",
     "condition": "Candidíase Vaginal",
     "tags": ["candidiase", "corrimento", "clotrimazol", "fluconazol", "miconazol"],
@@ -453,6 +429,30 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Tansulosina", "dosage": "0,4mg", "route": "VO", "frequency": "1x ao dia, por até 14 dias (ajuda a expelir o cálculo)." }
     ],
     "clinicalNotes": "Hidratação e analgesia são pilares. Orientar retorno se febre, dor incontrolável ou anúria. Cálculos > 10mm geralmente necessitam de intervenção."
+  },
+  {
+    "id": "lombalgia-mecanica",
+    "category": "Ortopedia",
+    "condition": "Lombalgia Mecânica / Torcicolo",
+    "tags": ["dor nas costas", "lombalgia", "relaxante muscular", "torsilax", "miosan"],
+    "prescriptions": [
+      { "drug": "Cetoprofeno (IV)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100mL SF 0,9%, correr em 20 min." },
+      { "drug": "Torsilax (ou similar)", "dosage": "1 cp", "route": "VO", "frequency": "12/12h ou 8/8h, por no máximo 7 dias." },
+      { "drug": "Ciclobenzaprina (Miosan)", "dosage": "10mg", "route": "VO", "frequency": "12/12h, por 5 dias." }
+    ],
+    "clinicalNotes": "Aplicar calor local. Orientar repouso relativo e evitar fatores de piora."
+  },
+  {
+    "id": "agitacao-psicomotora",
+    "category": "Psiquiatria",
+    "condition": "Agitação Psicomotora / Agressividade",
+    "tags": ["surto", "haldol", "fernegan", "contencao"],
+    "prescriptions": [
+      { "drug": "Haloperidol (Haloperidol)", "dosage": "5mg", "route": "IM", "frequency": "Antipsicótico incisivo." },
+      { "drug": "Prometazina (Fenergan)", "dosage": "50mg", "route": "IM", "frequency": "Sedativo e previne distonia do Haldol." },
+      { "drug": "Midazolam", "dosage": "5-15mg", "route": "IM", "frequency": "Se agitação extrema (risco p/ equipe)." }
+    ],
+    "clinicalNotes": "Combo 'Haldol 5 + Fenergan 50' IM é o padrão ouro. Evitar contenção física sem sedação."
   },
   {
     "id": "acatasia",
@@ -610,5 +610,107 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Óxido de Magnésio (Leve)", "dosage": "800-1600 mg/dia", "route": "VO", "frequency": "Dividido em 3-4 doses." }
     ],
     "clinicalNotes": "A reposição máxima recomendada é de 6g de Sulfato de Magnésio por dia."
+  },
+  {
+    "id": "hipermagnesemia",
+    "category": "Nefrologia",
+    "condition": "Hipermagnesemia",
+    "tags": ["magnésio", "gluconato de cálcio", "furosemida"],
+    "prescriptions": [
+        { "drug": "Gluconato de Cálcio 10%", "dosage": "1 ampola (10mL)", "route": "IV", "frequency": "Diluir em 50-100mL SF 0.9% e correr em 3-5 min (se grave/sintomático)." },
+        { "drug": "Furosemida", "dosage": "0,5-1 mg/Kg", "route": "IV", "frequency": "Até 4/4h, conforme tolerância." }
+    ],
+    "clinicalNotes": "Interromper fontes de magnésio. Considerar diálise se refratário ou insuficiência renal."
+  },
+  {
+      "id": "sifilis",
+      "category": "Infectologia",
+      "condition": "Sífilis (Primária, Secundária, Latente Recente)",
+      "tags": ["sífilis", "penicilina benzatina", "benzetacil", "doxiciclina", "ist"],
+      "prescriptions": [
+          { "drug": "Penicilina Benzatina", "dosage": "2.400.000 UI", "route": "IM", "frequency": "Dose única (1.2M em cada glúteo)." },
+          { "drug": "Doxiciclina (Alternativa)", "dosage": "100mg", "route": "VO", "frequency": "12/12h por 15 dias (exceto gestantes)." }
+      ],
+      "clinicalNotes": "Tratar parceiros. Para sífilis tardia ou terciária, o tratamento é de 3 doses de Penicilina Benzatina com intervalo semanal."
+  },
+  {
+      "id": "dengue",
+      "category": "Infectologia",
+      "condition": "Dengue (Manejo por Grupos)",
+      "tags": ["dengue", "febre", "hidratação", "paracetamol"],
+      "prescriptions": [
+          { "drug": "Paracetamol (Grupo A/B)", "dosage": "750mg", "route": "VO", "frequency": "8/8h para febre ou dor." },
+          { "drug": "Hidratação Oral (Grupo A/B)", "dosage": "60ml/kg/dia", "route": "VO", "frequency": "Aumentar ingestão de líquidos." },
+          { "drug": "Hidratação IV (Grupo C - Expansão)", "dosage": "10ml/kg", "route": "IV", "frequency": "Em 1-2h. Reavaliar e repetir se necessário." },
+          { "drug": "Hidratação IV (Grupo D - Expansão)", "dosage": "20ml/kg", "route": "IV", "frequency": "Em 20min. Reavaliar e repetir até 3x." }
+      ],
+      "clinicalNotes": "NÃO usar AINEs ou AAS. Monitorar sinais de alarme (dor abdominal, vômitos, sangramentos). A classificação em grupos (A, B, C, D) é essencial para o manejo."
+  },
+  {
+      "id": "herpes-simples",
+      "category": "Infectologia",
+      "condition": "Herpes Simples",
+      "tags": ["herpes", "aciclovir", "lesão"],
+      "prescriptions": [
+          { "drug": "Aciclovir (Oral)", "dosage": "400mg", "route": "VO", "frequency": "8/8h por 5-10 dias." },
+          { "drug": "Aciclovir (IV)", "dosage": "5-10 mg/kg", "route": "IV", "frequency": "8/8h (casos graves como encefalite)." },
+          { "drug": "Aciclovir (Supressão)", "dosage": "400mg", "route": "VO", "frequency": "12/12h por 4-6 meses (se >5 episódios/ano)." }
+      ],
+      "clinicalNotes": "O tratamento é mais eficaz quando iniciado nas primeiras 72h do surgimento das lesões."
+  },
+  {
+      "id": "conjuntivite",
+      "category": "Oftalmologia",
+      "condition": "Conjuntivite",
+      "tags": ["olho vermelho", "colírio", "moxifloxacino", "dexametasona"],
+      "prescriptions": [
+          { "drug": "Hialuronato de Sódio (Viral)", "dosage": "1 gota", "route": "Oftálmico", "frequency": "4/4h para lubrificação." },
+          { "drug": "Moxifloxacino Colírio (Bacteriana)", "dosage": "1 gota", "route": "Oftálmico", "frequency": "4/4h por 7-14 dias." },
+          { "drug": "Dexametasona Colírio", "dosage": "1 gota", "route": "Oftálmico", "frequency": "6/6h por 5 dias (apenas se pseudomembrana)." }
+      ],
+      "clinicalNotes": "Compressas geladas aliviam os sintomas. A maioria dos casos é viral e autolimitada. Corticoide apenas com avaliação oftalmológica."
+  },
+  {
+      "id": "anafilaxia-alergia",
+      "category": "Imunologia",
+      "condition": "Anafilaxia / Alergia Grave",
+      "tags": ["choque", "adrenalina", "anafilaxia", "alergia"],
+      "prescriptions": [
+          { "drug": "Adrenalina (Epinefrina)", "dosage": "0,5mg (>50kg)", "route": "IM", "frequency": "Dose única no músculo vasto lateral (coxa)." },
+          { "drug": "Prometazina (Alergia)", "dosage": "25mg", "route": "IM", "frequency": "Pode repetir após 2h." },
+          { "drug": "Hidrocortisona (Alergia)", "dosage": "1 ampola (50mg)", "route": "IV ou IM", "frequency": "Dose única." }
+      ],
+      "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas na anafilaxia. Não hesite em usar. Evitar Prometazina IV pelo risco de necrose."
+  },
+  {
+      "id": "intoxicacao-paracetamol",
+      "category": "Toxicologia",
+      "condition": "Intoxicação por Paracetamol",
+      "tags": ["paracetamol", "acetilcisteina", "antidoto"],
+      "prescriptions": [
+          { "drug": "N-Acetilcisteína (Antídoto)", "dosage": "Ataque: 150mg/kg", "route": "IV", "frequency": "Em 60 min, seguido de doses de manutenção." }
+      ],
+      "clinicalNotes": "A eficácia é máxima nas primeiras 8 horas após a ingestão. Indicado se ingestão >7,5g ou sinais de hepatotoxicidade."
+  },
+  {
+      "id": "intoxicacao-organofosforado",
+      "category": "Toxicologia",
+      "condition": "Intoxicação por Organofosforado/Carbamato",
+      "tags": ["veneno", "atropina", "antidoto"],
+      "prescriptions": [
+        { "drug": "Atropina", "dosage": "1-2 ampolas (0,5mg/mL)", "route": "IV Bolus", "frequency": "Repetir até controle dos sintomas muscarínicos (atropinização)." }
+      ],
+      "clinicalNotes": "O objetivo é reverter a síndrome colinérgica (salivação, broncorreia, miose). Não há dose máxima de atropina."
+  },
+  {
+      "id": "intoxicacao-cocaina",
+      "category": "Toxicologia",
+      "condition": "Intoxicação por Cocaína",
+      "tags": ["cocaina", "midazolam", "diazepam"],
+      "prescriptions": [
+        { "drug": "Diazepam", "dosage": "5-10mg", "route": "IV", "frequency": "Repetir a cada 5-10 min conforme agitação ou dor torácica." },
+        { "drug": "Midazolam", "dosage": "3mg", "route": "IV", "frequency": "Repetir a cada 5 min conforme agitação." }
+      ],
+      "clinicalNotes": "Benzodiazepínicos são a primeira linha para agitação, hipertensão e dor torácica associada. Evitar betabloqueadores."
   }
 ]
