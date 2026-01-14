@@ -91,7 +91,7 @@ export default {
         },
         'dot-color-change': {
           '0%, 50%': { color: 'hsl(var(--foreground))' },
-          '100%': { color: 'hsl(var(--accent))' },
+          '100%': { color: '#22c55e' },
         }
       },
       animation: {
