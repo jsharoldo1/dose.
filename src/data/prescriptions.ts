@@ -114,5 +114,43 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Midazolam", "dosage": "5-15mg", "route": "IM", "frequency": "Se agitação extrema (risco p/ equipe)." }
     ],
     "clinicalNotes": "Combo 'Haldol 5 + Fenergan 50' IM é o padrão ouro. Evitar contenção física sem sedação."
+  },
+  {
+    "id": "crise-asmatica",
+    "category": "Respiratório",
+    "condition": "Crise Asmática / Broncoespasmo",
+    "tags": ["asma", "aerolin", "berotec", "falta de ar"],
+    "prescriptions": [
+      { "drug": "Salbutamol (Aerolin) Spray", "dosage": "4 a 10 jatos", "route": "Inalatório", "frequency": "A cada 20 min na 1ª hora (com espaçador)." },
+      { "drug": "Ipratrópio (Atrovent)", "dosage": "4 jatos (ou 40 gotas nebu)", "route": "Inalatório", "frequency": "Adjuvante na crise moderada/grave." },
+      { "drug": "Prednisolona", "dosage": "40-60mg", "route": "VO", "frequency": "Dose única ou Hidrocortisona 200mg IV se grave." },
+      { "drug": "Sulfato de Magnésio", "dosage": "2g", "route": "IV", "frequency": "Em 20 min (Crise Grave/Refratária)." }
+    ],
+    "clinicalNotes": "Oxigênio para manter Sat > 93-95%."
+  },
+  {
+    "id": "pneumonia-comunidade",
+    "category": "Respiratório",
+    "condition": "Pneumonia Adquirida na Comunidade (PAC)",
+    "tags": ["infecção", "clavulin", "azitromicina", "ceftriaxona"],
+    "prescriptions": [
+      { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 7 dias (Ambulatorial)." },
+      { "drug": "Azitromicina", "dosage": "500mg", "route": "VO", "frequency": "1x ao dia por 5 dias (Associação ou monoterapia se leve)." },
+      { "drug": "Ceftriaxona", "dosage": "1g a 2g", "route": "IV", "frequency": "1x ao dia (Internação) + Claritromicina 500mg 12/12h." }
+    ],
+    "clinicalNotes": "Usar CURB-65 para decidir internação."
+  },
+  {
+    "id": "itu-cistite",
+    "category": "Infectologia",
+    "condition": "Infecção Urinária (Cistite / Pielonefrite)",
+    "tags": ["dor urinar", "monuril", "cipro", "rocefin"],
+    "prescriptions": [
+      { "drug": "Fosfomicina (Monuril)", "dosage": "3g", "route": "VO", "frequency": "Dose Única (Cistite não complicada)." },
+      { "drug": "Nitrofurantoína", "dosage": "100mg", "route": "VO", "frequency": "6/6h por 5-7 dias (Cistite)." },
+      { "drug": "Ceftriaxona", "dosage": "1g", "route": "IV", "frequency": "1x ao dia (Pielonefrite)." },
+      { "drug": "Ciprofloxacino", "dosage": "500mg", "route": "VO", "frequency": "12/12h (Opção para Pielonefrite, evitar na cistite simples)." }
+    ],
+    "clinicalNotes": "Solicitar urocultura em casos de pielonefrite ou recorrência."
   }
 ];
