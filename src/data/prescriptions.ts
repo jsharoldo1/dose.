@@ -712,5 +712,90 @@ export const prescriptionsData: PrescriptionData[] = [
         { "drug": "Midazolam", "dosage": "3mg", "route": "IV", "frequency": "Repetir a cada 5 min conforme agitação." }
       ],
       "clinicalNotes": "Benzodiazepínicos são a primeira linha para agitação, hipertensão e dor torácica associada. Evitar betabloqueadores."
+  },
+  {
+    "id": "hemocomponentes-hemacias",
+    "category": "Hematologia",
+    "condition": "Hemocomponentes: Concentrado de Hemácias",
+    "tags": ["sangue", "transfusão", "hemácias", "anemia"],
+    "prescriptions": [
+        { "drug": "Concentrado de Hemácias", "dosage": "1-2 Unidades", "route": "IV", "frequency": "Infusão em 60-120min por unidade. Acesso exclusivo." }
+    ],
+    "clinicalNotes": "Indicações variam (Hb < 7-8g/dL, sangramento agudo). Considerar tipos especiais: Irradiado (prevenir GVHD), Lavado (reações alérgicas), Desleucocitado (prevenir reação febril)."
+  },
+  {
+      "id": "hemocomponentes-plaquetas",
+      "category": "Hematologia",
+      "condition": "Hemocomponentes: Concentrado de Plaquetas",
+      "tags": ["sangue", "transfusão", "plaquetas", "plaquetopenia"],
+      "prescriptions": [
+          { "drug": "Concentrado de Plaquetas", "dosage": "1 unidade/10kg", "route": "IV", "frequency": "Infusão rápida." }
+      ],
+      "clinicalNotes": "Indicações: Plaquetopenia < 10.000, < 50.000 com sangramento ativo, ou < 100.000 para cirurgias neurológicas/oftálmicas."
+  },
+  {
+      "id": "hemocomponentes-plasma-crio",
+      "category": "Hematologia",
+      "condition": "Hemocomponentes: Plasma e Crioprecipitado",
+      "tags": ["sangue", "transfusão", "plasma", "crioprecipitado", "coagulação"],
+      "prescriptions": [
+          { "drug": "Plasma Fresco Congelado", "dosage": "10-15 ml/kg", "route": "IV", "frequency": "Para deficiência de múltiplos fatores de coagulação com sangramento." },
+          { "drug": "Crioprecipitado", "dosage": "1 unidade/10kg", "route": "IV", "frequency": "Para hipofibrinogenemia." }
+      ],
+      "clinicalNotes": "Usado para corrigir distúrbios da coagulação. Monitorar RNI e TTPa."
+  },
+  {
+      "id": "antimicrobianos-gerais",
+      "category": "Infectologia",
+      "condition": "Antimicrobianos (Guia Rápido)",
+      "tags": ["antibiótico", "infecção", "penicilina", "ceftriaxona", "ciprofloxacino"],
+      "prescriptions": [
+          { "drug": "Amoxicilina+Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h." },
+          { "drug": "Ceftriaxona", "dosage": "1-2g", "route": "IV", "frequency": "24/24h." },
+          { "drug": "Azitromicina", "dosage": "500mg", "route": "VO", "frequency": "24/24h." },
+          { "drug": "Ciprofloxacino", "dosage": "500mg VO ou 400mg IV", "route": "VO/IV", "frequency": "12/12h." },
+          { "drug": "Metronidazol", "dosage": "500mg", "route": "VO/IV", "frequency": "8/8h." }
+      ],
+      "clinicalNotes": "Este é um guia de referência rápida. A escolha do antimicrobiano depende do foco da infecção, perfil do paciente e epidemiologia local."
+  },
+  {
+      "id": "analgesicos-gerais",
+      "category": "Dor",
+      "condition": "Analgésicos (Guia Rápido)",
+      "tags": ["dor", "dipirona", "paracetamol", "tramadol", "morfina"],
+      "prescriptions": [
+          { "drug": "Dipirona", "dosage": "1g", "route": "VO/IV", "frequency": "6/6h." },
+          { "drug": "Paracetamol", "dosage": "750mg", "route": "VO", "frequency": "6/6h." },
+          { "drug": "Cetoprofeno", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100ml SF, correr em 20 min." },
+          { "drug": "Tramadol", "dosage": "50-100mg", "route": "IV", "frequency": "Diluir em 100ml SF, correr em 30 min." },
+          { "drug": "Morfina", "dosage": "2-5mg", "route": "IV", "frequency": "Dose de resgate para dor intensa." }
+      ],
+      "clinicalNotes": "Escalonar analgesia conforme a intensidade da dor (escala de dor). Cuidado com AINEs em pacientes com risco renal ou gastrointestinal."
+  },
+  {
+      "id": "aminas-vasoativas",
+      "category": "Terapia Intensiva",
+      "condition": "Aminas Vasoativas (Guia Rápido)",
+      "tags": ["choque", "noradrenalina", "dobutamina", "vasopressina", "uti"],
+      "prescriptions": [
+          { "drug": "Noradrenalina", "dosage": "0,05-2 mcg/kg/min", "route": "IV Contínuo", "frequency": "Primeira escolha no choque séptico. Diluir 5 ampolas (20ml) em 180ml SG 5%." },
+          { "drug": "Dobutamina", "dosage": "2-20 mcg/kg/min", "route": "IV Contínuo", "frequency": "Para choque cardiogênico. Diluir 2 ampolas (40ml) em 210ml SF." },
+          { "drug": "Vasopressina", "dosage": "0,01-0,04 U/min", "route": "IV Contínuo", "frequency": "Adjuvante no choque refratário." }
+      ],
+      "clinicalNotes": "Requer acesso venoso central e monitorização arterial invasiva (PAI) para titulação segura."
+  },
+  {
+      "id": "intubacao-orotraqueal",
+      "category": "Terapia Intensiva",
+      "condition": "Sequência Rápida de Intubação (SRI)",
+      "tags": ["iot", "intubação", "sedação", "fentanil", "midazolam", "rocuronio", "succinilcolina"],
+      "prescriptions": [
+          { "drug": "Fentanil (Analgesia)", "dosage": "2-3 mcg/kg", "route": "IV", "frequency": "Para pré-oxigenação, se houver tempo e estabilidade." },
+          { "drug": "Cetamina (Sedação)", "dosage": "1,5 mg/kg", "route": "IV", "frequency": "Início em 45-60s. Cardioestável." },
+          { "drug": "Etomidato (Sedação)", "dosage": "0,3 mg/kg", "route": "IV", "frequency": "Início em 45-60s. Cardioestável." },
+          { "drug": "Succinilcolina (Bloqueador)", "dosage": "1,5 mg/kg", "route": "IV", "frequency": "Início rápido (45s), curta duração. Cuidado com hipercalemia." },
+          { "drug": "Rocurônio (Bloqueador)", "dosage": "1,2 mg/kg", "route": "IV", "frequency": "Início em 60s, longa duração." }
+      ],
+      "clinicalNotes": "A SRI visa otimizar as condições de intubação e minimizar o risco de broncoaspiração. Seguir os 7 Ps da intubação."
   }
 ]
