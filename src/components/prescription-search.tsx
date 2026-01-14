@@ -6,27 +6,25 @@ import PrescriptionCard from './prescription-card';
 import { Frown } from 'lucide-react';
 
 type PrescriptionSearchProps = {
-  searchQuery: string;
+  searchTags: string[];
 };
 
-export default function PrescriptionSearch({ searchQuery }: PrescriptionSearchProps) {
+export default function PrescriptionSearch({ searchTags }: PrescriptionSearchProps) {
   const filteredPrescriptions = useMemo(() => {
-    const trimmedQuery = searchQuery.trim();
-    if (!trimmedQuery) return prescriptionsData;
-
-    const searchTerms = trimmedQuery.toLowerCase().split(' ').filter(term => term);
+    if (searchTags.length === 0) return prescriptionsData;
 
     return prescriptionsData.filter(item => {
-      // Check if all search terms are present in the prescription data
-      return searchTerms.every(term => {
+      // Check if all search tags are present in the prescription data
+      return searchTags.every(tag => {
+        const term = tag.toLowerCase();
         const inCondition = item.condition.toLowerCase().includes(term);
-        const inTags = item.tags.some(tag => tag.toLowerCase().includes(term));
+        const inTags = item.tags.some(t => t.toLowerCase().includes(term));
         const inDrugs = item.prescriptions.some(p => p.drug.toLowerCase().includes(term));
         
         return inCondition || inTags || inDrugs;
       });
     });
-  }, [searchQuery]);
+  }, [searchTags]);
 
   if (filteredPrescriptions.length === 0) {
     return (
@@ -34,7 +32,7 @@ export default function PrescriptionSearch({ searchQuery }: PrescriptionSearchPr
         <Frown className="h-12 w-12 text-muted-foreground" />
         <h3 className="mt-4 text-lg font-semibold">Nenhum resultado encontrado</h3>
         <p className="mt-2 text-sm text-muted-foreground">
-          Tente ajustar sua busca ou verifique a ortografia.
+          Tente ajustar sua busca ou verifique a ortografia das etiquetas.
         </p>
       </div>
     );
