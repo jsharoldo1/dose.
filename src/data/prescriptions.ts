@@ -26,7 +26,7 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Adenosina", "dosage": "6mg", "route": "IV Bolus Rápido", "frequency": "Seguido de flush 20ml SF. Se falha, administrar 12mg." },
       { "drug": "Metoprolol", "dosage": "2.5-5mg", "route": "IV Lento", "frequency": "Repetir a cada 5 min até dose máxima de 15mg." }
     ],
-    "clinicalNotes": "Em caso de instabilidade hemodinâmica (hipotensão, choque, dor torácica, dispneia), proceder com cardioversão elétrica sincronizada. Evitar em pacientes com doença pulmonar descompensada. Casos extremos podem cursar com assistolia."
+    "clinicalNotes": "Em caso de instabilidade hemodinâmica (hipotensão, choque, dor torácica, dispneia), proceder com cardioversão elétrica sincronizada. Evitar em pacientes com doença pulmonar descompensada."
   },
   {
     "id": "taquicardia-ventricular",
@@ -165,7 +165,7 @@ export const prescriptionsData: PrescriptionData[] = [
     "id": "crise-asmatica",
     "category": "Respiratório",
     "condition": "Crise Asmática / Broncoespasmo",
-    "tags": ["asma", "aerolin", "berotec", "falta de ar"],
+    "tags": ["asma", "aerolin", "berotec", "falta de ar", "ipratropio", "atrovent"],
     "prescriptions": [
       { "drug": "Salbutamol (Aerolin) Spray", "dosage": "4 a 10 jatos", "route": "Inalatório", "frequency": "A cada 20 min na 1ª hora (com espaçador)." },
       { "drug": "Ipratrópio (Atrovent)", "dosage": "4 jatos (ou 40 gotas nebu)", "route": "Inalatório", "frequency": "Adjuvante na crise moderada/grave." },
@@ -178,19 +178,19 @@ export const prescriptionsData: PrescriptionData[] = [
     "id": "pneumonia-comunidade",
     "category": "Respiratório",
     "condition": "Pneumonia Adquirida na Comunidade (PAC)",
-    "tags": ["infecção", "clavulin", "azitromicina", "ceftriaxona"],
+    "tags": ["infecção", "clavulin", "amoxicilina", "azitromicina", "ceftriaxona"],
     "prescriptions": [
       { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 7 dias (Ambulatorial)." },
       { "drug": "Azitromicina", "dosage": "500mg", "route": "VO", "frequency": "1x ao dia por 5 dias (Associação ou monoterapia se leve)." },
       { "drug": "Ceftriaxona", "dosage": "1g a 2g", "route": "IV", "frequency": "1x ao dia (Internação) + Claritromicina 500mg 12/12h." }
     ],
-    "clinicalNotes": "Usar CURB-65 para decidir internação."
+    "clinicalNotes": "Usar CURB-65 para decidir internação. Considerar fatores de risco para germes atípicos."
   },
   {
-    "id": "itu-cistite",
+    "id": "itu-cistite-pielonefrite",
     "category": "Infectologia",
     "condition": "Infecção Urinária (Cistite / Pielonefrite)",
-    "tags": ["dor urinar", "monuril", "cipro", "rocefin"],
+    "tags": ["itu", "dor ao urinar", "monuril", "cipro", "rocefin"],
     "prescriptions": [
       { "drug": "Fosfomicina (Monuril)", "dosage": "3g", "route": "VO", "frequency": "Dose Única (Cistite não complicada)." },
       { "drug": "Nitrofurantoína", "dosage": "100mg", "route": "VO", "frequency": "6/6h por 5-7 dias (Cistite)." },
@@ -198,5 +198,105 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Ciprofloxacino", "dosage": "500mg", "route": "VO", "frequency": "12/12h (Opção para Pielonefrite, evitar na cistite simples)." }
     ],
     "clinicalNotes": "Solicitar urocultura em casos de pielonefrite ou recorrência."
+  },
+  {
+    "id": "otite-media-aguda",
+    "category": "Respiratório",
+    "condition": "Otite Média Aguda",
+    "tags": ["otite", "dor de ouvido", "amoxicilina", "clavulanato"],
+    "prescriptions": [
+      { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 10 dias." },
+      { "drug": "Cefuroxima (se falha)", "dosage": "500mg", "route": "VO", "frequency": "12/12h por 10 dias." },
+      { "drug": "Azitromicina (se alergia)", "dosage": "500mg", "route": "VO", "frequency": "1x/dia por 5 dias." }
+    ],
+    "clinicalNotes": "Sinais de falha: febre ou otalgia persistentes após 48-72h de antibiótico."
+  },
+  {
+    "id": "sinusite-bacteriana",
+    "category": "Respiratório",
+    "condition": "Sinusite Bacteriana",
+    "tags": ["sinusite", "amoxicilina", "levofloxacino", "budesonida"],
+    "prescriptions": [
+      { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 10 dias." },
+      { "drug": "Levofloxacino (se alergia)", "dosage": "750mg", "route": "VO", "frequency": "1x/dia por 5 dias." },
+      { "drug": "Prednisolona", "dosage": "40mg", "route": "VO", "frequency": "1x/dia pela manhã por 5 dias." },
+      { "drug": "Budesonida Spray Nasal", "dosage": "2 jatos/narina", "route": "Inalatório", "frequency": "12/12h por 10 dias." }
+    ],
+    "clinicalNotes": "Critérios para sinusite bacteriana: secreção purulenta, dor facial intensa, febre > 38°C."
+  },
+  {
+    "id": "faringoamigdalite-bacteriana",
+    "category": "Respiratório",
+    "condition": "Faringoamigdalite Bacteriana",
+    "tags": ["garganta", "amigdalite", "benzetacil", "amoxicilina"],
+    "prescriptions": [
+      { "drug": "Penicilina Benzatina (Benzetacil)", "dosage": "1.200.000 UI", "route": "IM", "frequency": "Dose única." },
+      { "drug": "Amoxicilina + Clavulanato (se oral)", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 10 dias." },
+      { "drug": "Azitromicina (se alergia)", "dosage": "500mg", "route": "VO", "frequency": "1x/dia por 5 dias." },
+      { "drug": "Ibuprofeno", "dosage": "400mg", "route": "VO", "frequency": "Até 6/6h para dor/febre." }
+    ],
+    "clinicalNotes": "Benzetacil é o tratamento de escolha para erradicar o Streptococo e prevenir febre reumática."
+  },
+  {
+    "id": "dpoc-exacerbado",
+    "category": "Respiratório",
+    "condition": "DPOC Exacerbado",
+    "tags": ["dpoc", "salbutamol", "ipratropio", "prednisolona"],
+    "prescriptions": [
+      { "drug": "Salbutamol Spray", "dosage": "2 jatos", "route": "Inalatório", "frequency": "4/4h a 6/6h por 7 dias." },
+      { "drug": "Ipratrópio Spray", "dosage": "2 jatos", "route": "Inalatório", "frequency": "6/6h por 7 dias." },
+      { "drug": "Prednisolona", "dosage": "40mg", "route": "VO", "frequency": "1x/dia pela manhã por 7 dias." },
+      { "drug": "Amoxicilina + Clavulanato", "dosage": "875+125mg", "route": "VO", "frequency": "12/12h por 7 dias (se critérios de infecção)." }
+    ],
+    "clinicalNotes": "Antibióticos indicados se houver aumento do volume e/ou purulência do escarro, ou necessidade de ventilação mecânica."
+  },
+  {
+    "id": "tvp-tep",
+    "category": "Respiratório",
+    "condition": "TVP / TEP (Anticoagulação)",
+    "tags": ["tvp", "tep", "trombose", "enoxaparina", "rivaroxabana"],
+    "prescriptions": [
+      { "drug": "Enoxaparina (Dose Terapêutica)", "dosage": "1mg/kg", "route": "SC", "frequency": "12/12h." },
+      { "drug": "Heparina Não Fracionada", "dosage": "80 UI/kg bolus + 18 UI/kg/h", "route": "IV", "frequency": "Contínuo, com controle de PTTa." },
+      { "drug": "Rivaroxabana (Xarelto)", "dosage": "15mg", "route": "VO", "frequency": "12/12h por 3 semanas, depois 20mg 1x/dia." }
+    ],
+    "clinicalNotes": "A escolha da terapia depende do perfil do paciente, risco de sangramento e estabilidade hemodinâmica."
+  },
+  {
+    "id": "diarreia-aguda",
+    "category": "Gastroenterologia",
+    "condition": "Diarreia Aguda",
+    "tags": ["diarreia", "reidratação", "floratil", "tiorfan"],
+    "prescriptions": [
+      { "drug": "Sais para Reidratação Oral", "dosage": "1 envelope/500ml", "route": "VO", "frequency": "Beber ao longo do dia." },
+      { "drug": "Racecadotrila (Tiorfan)", "dosage": "100mg", "route": "VO", "frequency": "8/8h enquanto houver diarreia." },
+      { "drug": "Probiótico (Floratil)", "dosage": "200mg", "route": "VO", "frequency": "12/12h por 3 dias." }
+    ],
+    "clinicalNotes": "Se sinais de infecção (febre, sangue/pus nas fezes), considerar antibióticos como Ciprofloxacino + Metronidazol."
+  },
+  {
+    "id": "hemorragia-digestiva-alta-varicosa",
+    "category": "Gastroenterologia",
+    "condition": "Hemorragia Digestiva Alta (Varicosa)",
+    "tags": ["hda", "varizes", "terlipressina", "octreotide", "ceftriaxona"],
+    "prescriptions": [
+      { "drug": "Terlipressina", "dosage": "2mg", "route": "IV Bolus", "frequency": "Seguido de 1mg 4/4h." },
+      { "drug": "Octreotide", "dosage": "50mcg bolus + 50mcg/h", "route": "IV", "frequency": "Diluir 1 amp em 250ml SF e infundir." },
+      { "drug": "Ceftriaxona (Profilaxia PBE)", "dosage": "1g", "route": "IV", "frequency": "24/24h por 7 dias." },
+      { "drug": "Omeprazol", "dosage": "40mg", "route": "IV", "frequency": "12/12h." }
+    ],
+    "clinicalNotes": "Prioridade é a estabilização hemodinâmica. EDA nas primeiras 12-24h."
+  },
+  {
+    "id": "hemorragia-digestiva-baixa",
+    "category": "Gastroenterologia",
+    "condition": "Hemorragia Digestiva Baixa",
+    "tags": ["hdb", "sangramento", "dieta zero"],
+    "prescriptions": [
+      { "drug": "Dieta Suspensa", "dosage": "N/A", "route": "N/A", "frequency": "Até estabilização e investigação." },
+      { "drug": "Omeprazol", "dosage": "40mg", "route": "IV", "frequency": "12/12h." },
+      { "drug": "Ondansetrona", "dosage": "4mg", "route": "IV", "frequency": "8/8h se náuseas/vômitos." }
+    ],
+    "clinicalNotes": "Prioridade é estabilização hemodinâmica. Investigar causa com colonoscopia após preparo."
   }
 ];
