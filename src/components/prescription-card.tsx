@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Pill, Stethoscope, FileText } from 'lucide-react';
+import { Pill, FileText } from 'lucide-react';
 
 type PrescriptionCardProps = {
   data: PrescriptionData;
@@ -33,8 +33,8 @@ export default function PrescriptionCard({ data }: PrescriptionCardProps) {
                 Posologia e Via
             </h3>
             <ul className="space-y-3">
-                {data.prescriptions.map((p) => (
-                    <li key={p.drug} className="grid grid-cols-[auto,1fr] gap-x-2 text-sm">
+                {data.prescriptions.map((p, index) => (
+                    <li key={`${p.drug}-${index}`} className="grid grid-cols-[auto,1fr] gap-x-2 text-sm">
                         <strong className="font-semibold col-start-2">{p.drug}</strong>
                         <div className="col-start-2 text-muted-foreground">
                             <span>{p.dosage}</span> • <span>{p.route}</span> • <span>{p.frequency}</span>
