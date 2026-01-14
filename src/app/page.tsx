@@ -1,18 +1,33 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AppHeader from '@/components/app-header';
 import DisclaimerModal from '@/components/disclaimer-modal';
 import PrescriptionSearch from '@/components/prescription-search';
 import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
+import SplashScreen from '@/components/splash-screen';
 
 export default function Home() {
   const [searchTags, setSearchTags] = useState<string[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500); // Duração da splash screen
+
+    return () => clearTimeout(timer);
+  }, []);
+
 
   const removeTag = (tagToRemove: string) => {
     setSearchTags(searchTags.filter(tag => tag !== tagToRemove));
   };
+
+  if (isLoading) {
+    return <SplashScreen />;
+  }
 
   return (
     <>

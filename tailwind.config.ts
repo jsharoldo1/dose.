@@ -85,10 +85,20 @@ export default {
             height: '0',
           },
         },
+        'fade-in-splash': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        'fade-out-splash': {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0', visibility: 'hidden' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'fade-in-splash': 'fade-in-splash 0.5s ease-in-out forwards',
+        'fade-out-splash': 'fade-out-splash 0.5s ease-in-out forwards',
       },
     },
   },
