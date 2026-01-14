@@ -65,5 +65,54 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "VNI (Ventilação Não Invasiva)", "dosage": "CPAP ou BiPAP", "route": "Dispositivo", "frequency": "Fundamental no manejo inicial do EAP hipertensivo." }
     ],
     "clinicalNotes": "Objetivo: Vasodilatação e Diurese. Morfina caiu em desuso no EAP."
+  },
+  {
+    "id": "cefaleia-enxaqueca",
+    "category": "Neurologia",
+    "condition": "Cefaleia / Enxaqueca Aguda",
+    "tags": ["dor de cabeça", "dipirona", "dexametasona", "profenid"],
+    "prescriptions": [
+      { "drug": "Cetoprofeno (Profenid)", "dosage": "100mg", "route": "IV", "frequency": "Diluir em 100ml SF, correr em 20 min." },
+      { "drug": "Dexametasona", "dosage": "10mg (1 amp)", "route": "IV ou IM", "frequency": "Dose única (previne recorrência)." },
+      { "drug": "Dipirona", "dosage": "1g", "route": "IV", "frequency": "Lento." },
+      { "drug": "Sumatriptano", "dosage": "6mg", "route": "SC (Subcutâneo)", "frequency": "Se disponível. Específico para enxaqueca." }
+    ],
+    "clinicalNotes": "Descartar sinais de alarme (Red Flags) antes de tratar apenas a dor."
+  },
+  {
+    "id": "crise-convulsiva",
+    "category": "Neurologia",
+    "condition": "Crise Convulsiva / Status Epilepticus",
+    "tags": ["convulsão", "diazepam", "hidantal", "ataque"],
+    "prescriptions": [
+      { "drug": "1º Passo: Diazepam", "dosage": "10mg", "route": "IV", "frequency": "Lento (2mg/min). Pode repetir 1x." },
+      { "drug": "2º Passo: Fenitoína (Hidantal)", "dosage": "20mg/kg", "route": "IV", "frequency": "Diluir em SF (não usar SG!). Vel máx 50mg/min. Monitorar hipotensão/arritmia." },
+      { "drug": "3º Passo: Fenobarbital", "dosage": "20mg/kg", "route": "IV", "frequency": "Se refratário à fenitoína." }
+    ],
+    "clinicalNotes": "Se acesso difícil, Midazolam IM (10mg) é alternativa inicial."
+  },
+  {
+    "id": "vertigem-tontura",
+    "category": "Neurologia",
+    "condition": "Vertigem / Tontura Aguda",
+    "tags": ["labirintite", "dramin", "cinarizina"],
+    "prescriptions": [
+      { "drug": "Dimenidrato (Dramin B6)", "dosage": "50mg", "route": "IV", "frequency": "Diluir e fazer lento (causa sonolência)." },
+      { "drug": "Cinarizina", "dosage": "25mg", "route": "VO", "frequency": "De 8/8h para manutenção." },
+      { "drug": "Meclozina", "dosage": "50mg", "route": "VO", "frequency": "De 8/8h." }
+    ],
+    "clinicalNotes": "Diferenciar vertigem central (AVC) de periférica. HINTS exam se necessário."
+  },
+  {
+    "id": "agitacao-psicomotora",
+    "category": "Psiquiatria",
+    "condition": "Agitação Psicomotora / Agressividade",
+    "tags": ["surto", "haldol", "fernegan", "contencao"],
+    "prescriptions": [
+      { "drug": "Haldol (Haloperidol)", "dosage": "5mg", "route": "IM", "frequency": "Antipsicótico incisivo." },
+      { "drug": "Prometazina (Fenergan)", "dosage": "50mg", "route": "IM", "frequency": "Sedativo e previne distonia do Haldol." },
+      { "drug": "Midazolam", "dosage": "5-15mg", "route": "IM", "frequency": "Se agitação extrema (risco p/ equipe)." }
+    ],
+    "clinicalNotes": "Combo 'Haldol 5 + Fenergan 50' IM é o padrão ouro. Evitar contenção física sem sedação."
   }
 ];
