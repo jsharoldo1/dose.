@@ -32,21 +32,27 @@ export default function InstallPwaButton() {
       e.preventDefault();
       const promptEvent = e as BeforeInstallPromptEvent;
       setDeferredPrompt(promptEvent);
-      
-      const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
-      if (!isStandalone) {
+      // Força a exibição do botão em dispositivos não-iOS quando o evento é disparado
+      if (!isIos) {
         setShowButton(true);
       }
     };
 
     const userAgent = window.navigator.userAgent.toLowerCase();
     const isSafariOnIos = /iphone|ipad|ipod/.test(userAgent) && /safari/.test(userAgent) && !/crios/.test(userAgent) && !/fxios/.test(userAgent);
-    
+    const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+    const isStandalone = window.matchMedia('(display-mode: standalone)').matches;
+
     setIsIos(isSafariOnIos);
 
-    // Se for iOS e não estiver em modo standalone, mostra o botão
-    if (isSafariOnIos && !window.matchMedia('(display-mode: standalone)').matches) {
-      setShowButton(true);
+    if (isMobile && !isStandalone) {
+        if (isSafariOnIos) {
+            setShowButton(true);
+        } else {
+            // Para outros dispositivos móveis, esperamos o 'beforeinstallprompt',
+            // mas também podemos mostrá-lo se o evento não disparar por algum motivo.
+            // Por enquanto, vamos confiar no evento.
+        }
     }
     
     window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
@@ -54,7 +60,7 @@ export default function InstallPwaButton() {
     return () => {
       window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     };
-  }, []);
+  }, [isIos]); // Adicionado isIos como dependência
 
   const handleInstallClick = async () => {
     if (isIos) {
