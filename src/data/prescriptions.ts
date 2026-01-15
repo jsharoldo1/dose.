@@ -169,12 +169,12 @@ export const prescriptionsData: PrescriptionData[] = [
     "condition": "Choque Anafilático",
     "tags": ["anafilaxia", "adrenalina", "choque"],
     "prescriptions": [
-      { "drug": "Adrenalina (Adultos >50kg)", "dosage": "0,5 mg (meia ampola de 1mg/mL)", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." },
-      { "drug": "Adrenalina (Crianças 25-50kg)", "dosage": "0,3 mg", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." },
-      { "drug": "Adrenalina (Crianças 10-25kg)", "dosage": "0,15 mg", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." },
-      { "drug": "Adrenalina (Crianças <10kg)", "dosage": "0,01 mL/kg", "route": "IM", "frequency": "Aplicar no músculo vasto lateral (coxa)." }
+      { "drug": "Adrenalina (Adultos >50kg)", "dosage": "0,5 mg (meia ampola)", "route": "IM no vasto lateral (coxa)", "frequency": "Cada ampola de 1mg/mL." },
+      { "drug": "Adrenalina (Crianças 25-50kg)", "dosage": "0,3 mg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." },
+      { "drug": "Adrenalina (Crianças 10-25kg)", "dosage": "0,15 mg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." },
+      { "drug": "Adrenalina (Crianças <10kg)", "dosage": "0,01 mL/kg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." }
     ],
-    "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas. A apresentação da ampola é de 1mg/1mL. Não hesite em usar em caso de suspeita de anafilaxia."
+    "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas. Não hesite em usar em caso de suspeita de anafilaxia."
   },
   {
     "id": "colangite",
@@ -769,9 +769,9 @@ export const prescriptionsData: PrescriptionData[] = [
     "condition": "Trombólise no IAM com Supra",
     "tags": ["trombolise", "infarto", "iam", "alteplase", "sca"],
     "prescriptions": [
-      { "drug": "Alteplase", "dosage": "15mg bolus, depois 0.75mg/kg em 30min (máx 50mg), seguido de 0.5mg/kg em 60min (máx 35mg)", "route": "IV", "frequency": "Dose total máxima de 100mg." }
+      { "drug": "Alteplase 1 mg/ml", "dosage": "Dose máxima: 100 mg", "route": "IV", "frequency": "Fazer Bolus de 15 mg, depois 0,75 mg/Kg durante 30 min (máximo de 50 mg) e depois mais 0,50 mg/Kg durante 60 min (máximo de 35 mg)." }
     ],
-    "clinicalNotes": "Contraindicações absolutas: AVC hemorrágico prévio, AVC isquêmico < 3 meses, lesão estrutural do SNC, cirurgia ou trauma grave recentes, sangramento ativo, suspeita de dissecção de aorta, hipertensão grave não controlada."
+    "clinicalNotes": "Contraindicações absolutas à trombólise: AVC hemorrágico prévio, AVC isquêmico nos últimos 3 meses, lesão estrutural do SNC (malformação vascular, câncer primário ou metastático), cirurgia do SNC ou medular nos últimos 2 mese, suspeita de dissecção de aorta, sangramento ativo (exceto menstruação), trauma facial ou TCE grave nos últimos 3 meses, hipertensão arterial grave e não controlada."
   },
   {
     "id": "tricomoniase",
