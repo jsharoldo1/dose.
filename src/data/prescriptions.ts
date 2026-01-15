@@ -771,7 +771,7 @@ export const prescriptionsData: PrescriptionData[] = [
     "prescriptions": [
       { "drug": "Alteplase", "dosage": "15mg bolus, depois 0.75mg/kg em 30min (máx 50mg), seguido de 0.5mg/kg em 60min (máx 35mg)", "route": "IV", "frequency": "Dose total máxima de 100mg." }
     ],
-    "clinicalNotes": "Verificar contraindicações absolutas: AVC hemorrágico prévio, AVC isquêmico < 3 meses, lesão estrutural do SNC, cirurgia ou trauma grave recentes, sangramento ativo, suspeita de dissecção de aorta."
+    "clinicalNotes": "Contraindicações absolutas: AVC hemorrágico prévio, AVC isquêmico < 3 meses, lesão estrutural do SNC, cirurgia ou trauma grave recentes, sangramento ativo, suspeita de dissecção de aorta, hipertensão grave não controlada."
   },
   {
     "id": "tricomoniase",
