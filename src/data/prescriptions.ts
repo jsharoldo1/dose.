@@ -172,9 +172,9 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Adrenalina (Adultos >50kg)", "dosage": "0,5 mg (meia ampola)", "route": "IM no vasto lateral (coxa)", "frequency": "Cada ampola de 1mg/mL." },
       { "drug": "Adrenalina (Crianças 25-50kg)", "dosage": "0,3 mg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." },
       { "drug": "Adrenalina (Crianças 10-25kg)", "dosage": "0,15 mg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." },
-      { "drug": "Adrenalina (Crianças <10kg)", "dosage": "0,01 mL/kg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." }
+      { "drug": "Adrenalina (Crianças <10kg)", "dosage": "0,01 mg/kg", "route": "IM no vasto lateral (coxa)", "frequency": "Dose pediátrica." }
     ],
-    "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas. Não hesite em usar em caso de suspeita de anafilaxia."
+    "clinicalNotes": "Adrenalina é o tratamento de primeira linha e salva vidas. Não hesite em usar em caso de suspeita de anafilaxia. Para crianças com menos de 10kg, a dose é de 0,01mg/kg (ou 0,01mL/kg da solução 1mg/mL)."
   },
   {
     "id": "colangite",
@@ -769,9 +769,9 @@ export const prescriptionsData: PrescriptionData[] = [
     "condition": "Trombólise no IAM com Supra",
     "tags": ["trombolise", "infarto", "iam", "alteplase", "sca"],
     "prescriptions": [
-      { "drug": "Alteplase 1 mg/ml", "dosage": "Dose máxima: 100 mg", "route": "IV", "frequency": "Fazer Bolus de 15 mg, depois 0,75 mg/Kg durante 30 min (máximo de 50 mg) e depois mais 0,50 mg/Kg durante 60 min (máximo de 35 mg)." }
+      { "drug": "Alteplase (1 mg/ml)", "dosage": "Dose máxima total: 100 mg", "route": "IV", "frequency": "15mg bolus, depois 0.75mg/kg durante 30min (máx 50mg), seguido de 0.5mg/kg durante 60min (máx 35mg)" }
     ],
-    "clinicalNotes": "Contraindicações absolutas à trombólise: AVC hemorrágico prévio, AVC isquêmico nos últimos 3 meses, lesão estrutural do SNC (malformação vascular, câncer primário ou metastático), cirurgia do SNC ou medular nos últimos 2 mese, suspeita de dissecção de aorta, sangramento ativo (exceto menstruação), trauma facial ou TCE grave nos últimos 3 meses, hipertensão arterial grave e não controlada."
+    "clinicalNotes": "A trombólise possui contraindicações absolutas, como: AVC hemorrágico em qualquer momento; AVC isquêmico nos últimos 3 meses; neoplasia ou malformação vascular conhecida no SNC; cirurgia de grande porte, TCE ou trauma facial nos últimos 3 meses; suspeita de dissecção de aorta; sangramento ativo (excluindo menstruação); ou hipertensão arterial não controlada."
   },
   {
     "id": "tricomoniase",
@@ -819,7 +819,7 @@ export const prescriptionsData: PrescriptionData[] = [
       { "drug": "Ceftriaxona", "dosage": "500mg", "route": "IM", "frequency": "Dose única." },
       { "drug": "Azitromicina", "dosage": "1g (2 cp de 500mg)", "route": "VO", "frequency": "Dose única (associar)." }
     ],
-    "clinicalNotes": "Sempre tratar para gonococo e clamídia (com Azitromicina) devido à alta taxa de coinfecção."
+    "clinicalNotes": "Sempre tratar para gonococo e clamídia (com Azitromicina) due to a alta taxa de coinfecção."
   },
   {
     "id": "uretrite-nao-gonococica",
