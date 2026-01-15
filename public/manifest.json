@@ -2,6 +2,10 @@
   "name": "Dose.",
   "short_name": "Dose.",
   "description": "Guia de bolso rápido para médicos consultarem prescrições e condutas de emergência.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#0F172A",
   "icons": [
     {
       "src": "/doselogotipo.png",
@@ -13,9 +17,5 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "theme_color": "#0F172A",
-  "background_color": "#0F172A",
-  "display": "standalone",
-  "start_url": "/"
+  ]
 }
