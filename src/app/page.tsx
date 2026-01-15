@@ -7,6 +7,7 @@ import PrescriptionSearch from '@/components/prescription-search';
 import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
 import SplashScreen from '@/components/splash-screen';
+import InstallPwaButton from '@/components/install-pwa-button';
 
 export default function Home() {
   const [searchTags, setSearchTags] = useState<string[]>([]);
@@ -55,6 +56,7 @@ export default function Home() {
           )}
           <PrescriptionSearch searchTags={searchTags} />
         </main>
+        <InstallPwaButton />
       </div>
     </>
   );
